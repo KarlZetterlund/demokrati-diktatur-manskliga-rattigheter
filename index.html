@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#edf5ef">
+<title>Demokrati, Diktatur & Mänskliga Rättigheter · Kalles Quizportal</title>
+<style>
+:root{--bg:#f4f7f3;--paper:#fff;--ink:#233a30;--muted:#61786a;--green:#357456;--deep:#24543e;--line:#dce8dd;--soft:#eaf4ec;--light:#f5faf5;--red:#a44640;--redbg:#fff0ed;--shadow:0 15px 40px #203d2b0a;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}*{box-sizing:border-box}body{margin:0;line-height:1.55}button,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.48;cursor:default}a{color:var(--green)}.shell{max-width:1100px;margin:auto;padding:25px 23px 85px}.topnav{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 25px}.back{font-weight:650;text-decoration:none;font-size:14px}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:750}.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#e5f1e8 0%,#f4f9f3 100%);border:1px solid #d3e4d6;border-radius:26px;padding:39px 43px 38px;box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;right:-68px;top:-110px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,#a9d0b545,transparent 70%);pointer-events:none}.hero h1{font-family:Georgia,serif;letter-spacing:-.03em;line-height:1.13;font-size:clamp(31px,4.6vw,52px);font-weight:600;margin:12px 0 15px;max-width:800px}.hero p{max-width:650px;color:#567260;margin:0;font-size:16px}.hero .decor{position:absolute;right:34px;bottom:10px;font-family:Georgia,serif;font-size:110px;color:#b4d3bc55;line-height:1;pointer-events:none}.modecards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin:23px 0 26px}.mode{border:1px solid var(--line);border-radius:20px;background:var(--paper);padding:24px;text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:10px;box-shadow:var(--shadow);transition:transform .15s,border-color .15s}.mode:hover{transform:translateY(-2px);border-color:#b1d0ba}.mode.active{background:#f0f8f1;border:2px solid #83b596;padding:23px}.mode .ico{width:43px;height:43px;border-radius:13px;background:#e7f2e9;display:grid;place-items:center;color:var(--green);font-size:22px}.mode strong{font-size:20px}.mode .desc{font-size:14px;color:var(--muted)}.mode .small{font-size:12px;font-weight:700;color:var(--green);margin-top:auto}.panel{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:25px;box-shadow:var(--shadow)}.sectionTitle{font-family:Georgia,serif;font-size:29px;font-weight:600;line-height:1.25;margin:0 0 8px}.sub{color:var(--muted);font-size:14px;margin:0 0 23px}.training{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,1fr);gap:18px}.minihead{display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--muted);font-size:13px;font-weight:700;margin-bottom:14px}.flash{width:100%;min-height:265px;border:1px solid #cbded0;background:linear-gradient(150deg,#f9fcf9,#e7f3e9);border-radius:16px;padding:24px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:18px;text-align:center;color:var(--ink)}.flash:hover{border-color:#93bda0}.flash .face{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:750;color:var(--green)}.flash strong{font-size:clamp(21px,2.6vw,30px);line-height:1.35}.flash.flipped strong{font-size:clamp(16px,2vw,21px);font-weight:550}.flash .tip{font-size:12px;color:var(--muted)}.row{display:flex;gap:9px;flex-wrap:wrap}.row>*{flex:1}.btn{padding:12px 15px;border-radius:11px;border:1px solid #d1e0d5;background:#fff;color:var(--deep);font-weight:700;transition:background .12s}.btn:hover:not(:disabled){background:#f0f7f1}.btn.primary{background:var(--green);border-color:var(--green);color:#fff}.btn.primary:hover:not(:disabled){background:var(--deep)}.btn.warn{color:#9a4a39}.flashActions{margin-top:12px}.sort{margin-top:19px;padding-top:16px;border-top:1px solid var(--line)}.sort p{font-size:14px;color:var(--muted);margin:0 0 10px}.sort .btn{font-size:13px}.stat{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #edf1ed;padding:12px 0;color:var(--muted);font-size:14px}.stat b{font-size:21px;color:var(--ink)}.bar{height:10px;border-radius:10px;background:#e5eee7;overflow:hidden;margin:19px 0 8px}.bar>i{display:block;height:100%;background:var(--green);width:0;transition:width .2s}.quiet{font-size:13px;color:var(--muted)}.reset{background:none;border:0;text-decoration:underline;color:#86685b;padding:0;margin-top:21px;font-size:13px}.catalog{margin-top:24px}.cataloghead{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:15px}.cataloghead h3{margin:0;font-size:20px}.search{border:1px solid #cdded0;border-radius:11px;padding:12px;min-width:240px;background:#fff}.glossary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.glossary details{border:1px solid var(--line);border-radius:12px;padding:13px 16px;background:#fff}.glossary summary{cursor:pointer;font-weight:700}.glossary p{font-size:14px;color:var(--muted);margin:10px 0 0}.quizIntro{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}.pills{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 24px}.pill{border-radius:99px;background:#edf5ee;color:#426b50;padding:6px 12px;font-size:12px;font-weight:700}.quizLead{max-width:660px}.quizLead p{color:var(--muted);margin:0}.start{min-width:190px}.progressRow{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:13px;color:var(--muted);font-weight:700}.progress{height:8px;background:#e6eee7;border-radius:10px;overflow:hidden;margin:13px 0 27px}.progress i{display:block;height:100%;background:var(--green);transition:width .2s}.questionType{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);font-weight:750}.question{font-size:clamp(19px,2.4vw,25px);font-weight:680;line-height:1.45;margin:12px 0 23px}.answers{display:grid;gap:11px}.answer{display:flex;align-items:flex-start;gap:13px;text-align:left;width:100%;border:1px solid #d5e3d8;border-radius:13px;background:#fff;padding:15px 16px;color:var(--ink);line-height:1.5}.answer:not(:disabled):hover{border-color:#7fac8d;background:#f5faf6}.answer .letter{flex:none;display:grid;place-items:center;width:27px;height:27px;border-radius:8px;background:#eaf3ec;color:var(--green);font-weight:800;font-size:12px}.answer.correct{border-color:#64a57a;background:#eef8f0}.answer.wrong{border-color:#d99b94;background:var(--redbg)}.answer.correct .letter{background:#d5eeda}.answer.wrong .letter{background:#f4d8d4;color:var(--red)}.feedback{margin-top:19px;border-radius:13px;padding:18px 20px;border:1px solid #cfe5d4;background:#f1f9f2}.feedback.bad{background:#fff5f2;border-color:#edd5cf}.feedback strong{display:block;margin-bottom:7px}.feedback p{margin:0;color:#536c5c}.feedback.bad p{color:#765d58}.quizNav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:24px;flex-wrap:wrap}.score{font-family:Georgia,serif;font-size:68px;line-height:1.1;color:var(--green);margin:12px 0}.resultGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:24px 0}.resultGrid>div{background:#f2f8f3;border-radius:12px;padding:15px}.resultGrid strong{display:block;font-size:24px}.resultGrid span{font-size:12px;color:var(--muted)}.reviewItem{padding:17px 0;border-top:1px solid var(--line)}.reviewItem h4{margin:0 0 7px;font-size:15px}.reviewItem p{margin:5px 0;font-size:13px;color:var(--muted)}.reviewItem .badText{color:#a24741}.reviewItem .goodText{color:#2d7950}.foot{margin-top:27px;color:#7a8b7e;font-size:12px}.hidden{display:none!important}button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #85bd97;outline-offset:3px}@media(max-width:760px){.shell{padding:16px 13px 55px}.hero{padding:29px 24px}.hero .decor{display:none}.modecards,.training,.glossary{grid-template-columns:1fr}.panel{padding:19px}.mode{padding:20px}.mode.active{padding:19px}.flash{min-height:245px}.quizIntro .start{width:100%}.resultGrid{gap:6px}.resultGrid>div{padding:10px}.resultGrid strong{font-size:20px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Avskalad startsida i Quizportalens stil */
+.hero{max-width:860px;margin:38px auto 0;text-align:center;background:transparent;border:0;box-shadow:none;padding:20px 12px 16px;border-radius:0}
+.hero:after{display:none}.hero h1{margin:0 auto;max-width:750px;font-size:clamp(30px,4vw,48px)}
+.modecards{max-width:780px;margin:30px auto 0;gap:20px}
+.mode{min-height:185px;align-items:center;justify-content:center;text-align:center;gap:18px;border-radius:20px;padding:30px;background:#fff}
+.mode .ico{width:60px;height:60px;font-size:29px;border-radius:17px}.mode strong{font-family:Georgia,serif;font-size:25px;font-weight:600}
+.exerciseBack{margin:0 0 22px}.exerciseBack .btn{font-size:13px;padding:9px 13px}
+@media(max-width:760px){.hero{margin-top:14px}.modecards{grid-template-columns:1fr;margin-top:20px;gap:12px}.mode{min-height:130px;padding:20px}.mode strong{font-size:23px}}
+.quizInstructions{color:var(--muted);font-size:14px;line-height:1.65;margin:0 0 23px;max-width:760px}
+.listAction{margin-top:20px;display:flex;justify-content:flex-start}.termListPanel{max-width:900px;margin:auto}.termListActions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}.termListEntries{display:grid;gap:0}.termEntry{padding:14px 0;border-bottom:1px solid var(--line);break-inside:avoid;page-break-inside:avoid}.termEntry h3{font-size:16px;margin:0 0 4px;color:var(--deep)}.termEntry p{margin:0;font-size:14px;line-height:1.55}.termEntry:last-child{border-bottom:0}
+@media print{@page{size:A4;margin:16mm 18mm}body{background:#fff!important;color:#222!important}.shell{max-width:none;padding:0!important}.topnav,.hero,.modecards,.exerciseBack,#cardsSection,#quizSection,.termListActions{display:none!important}#termListSection,#termListSection.hidden{display:block!important}.termListPanel{border:0;box-shadow:none;padding:0;max-width:none}.sectionTitle{font-size:24px}.termEntry{padding:9px 0;border-bottom:1px solid #ddd}.termEntry h3{font-size:12px;color:#222}.termEntry p{font-size:11px;line-height:1.4}.termListPanel .sub{font-size:11px;margin-bottom:12px}}
+</style>
+</head>
+<body>
+<main class="shell">
+<nav class="topnav"><a class="back" href="https://karlzetterlund.github.io/kallesquizportal/">← Till Kalles Quizportal</a><span class="eyebrow">Samhällskunskap 1</span></nav>
+<header class="hero" id="homeHero"><h1>Demokrati, Diktatur &amp;<br>Mänskliga Rättigheter</h1></header>
+<div class="modecards" id="homeChoices" role="group" aria-label="Välj övning">
+<button class="mode" id="chooseCards" type="button"><span class="ico" aria-hidden="true">▤</span><strong>Träna begrepp</strong></button>
+<button class="mode" id="chooseQuiz" type="button"><span class="ico" aria-hidden="true">✓</span><strong>Gör Quiz</strong></button>
+</div>
+<div class="exerciseBack hidden" id="exerciseBack"><button class="btn" id="backToHome" type="button">← Tillbaka till övningarna</button></div>
+<section id="cardsSection" class="hidden">
+<div class="training">
+<section class="panel"><h2 class="sectionTitle">Träna begrepp</h2><p class="sub">Vänd kortet och placera begreppet i rätt träningslåda.</p><div class="minihead"><span id="cardCounter">Kort 1 av 21</span><span id="cardMode">Alla begrepp</span></div><button id="flash" class="flash" type="button" aria-label="Vänd begreppskort"><span class="face" id="cardFace">Begrepp</span><strong id="cardContent"></strong><span class="tip">Klicka för att vända kortet ↻</span></button><div class="row flashActions"><button class="btn" id="prevCard">← Föregående</button><button class="btn primary" id="flipCard">Visa definition</button><button class="btn" id="nextCard">Nästa →</button></div><div class="sort hidden" id="sortArea"><p>Hur väl kan du begreppet?</p><div class="row"><button class="btn" data-box="1">Kan inte begreppet</button><button class="btn" data-box="2">Kan nästan begreppet</button><button class="btn" data-box="3">Kan begreppet</button></div></div></section>
+<aside class="panel"><h2 class="sectionTitle">Din träning</h2><p class="sub">Dina framsteg sparas automatiskt i den här webbläsaren.</p><div class="bar"><i id="cardBar"></i></div><div class="stat">Kan inte begreppet <b id="count1">0</b></div><div class="stat">Kan nästan begreppet <b id="count2">0</b></div><div class="stat">Kan begreppet <b id="count3">0</b></div><div class="stat">Inte tränade <b id="count0">21</b></div><p class="quiet">Repetera alla kort eller bara dem som du ännu inte lagt i ”Kan begreppet”.</p><div class="row"><button class="btn primary" id="allCards">Alla begrepp</button><button class="btn" id="reviewCards">Repetera svåra</button></div><button class="reset" id="resetCards">Nollställ min träning</button></aside>
+</div>
+<section class="catalog"><div class="cataloghead"><div><h3>Alla 21 begrepp</h3><p class="quiet">Öppna ett begrepp för att läsa definitionen.</p></div><input class="search" id="searchCards" type="search" placeholder="Sök begrepp…" aria-label="Sök begrepp"></div><div id="glossary" class="glossary"></div></section>
+<div class="listAction"><button class="btn primary" id="openTermList" type="button">Skapa begreppslista →</button></div>
+</section>
+<section id="quizSection" class="hidden">
+<div class="panel hidden" id="quizPlay"><div class="progressRow"><span id="quizCount">Fråga 1 av 20</span><span id="quizCorrect">0 rätt hittills</span></div><div class="progress"><i id="quizBar"></i></div><p class="quizInstructions">Du får 20 frågor slumpade ur frågebanken som består av <strong id="bankQuestionCount"></strong> frågor. Varje fråga har fyra alternativ och ett rätt svar. Efter ditt val får du direkt en förklaring. Frågebanken fylls på under momentet.</p><h2 class="question" id="questionText"></h2><div class="answers" id="answerList"></div><div class="feedback hidden" id="feedback" role="status" aria-live="polite"><strong id="feedbackTitle"></strong><p id="feedbackText"></p></div><div class="quizNav"><span class="quiet">Välj det alternativ du tycker är bäst.</span><button class="btn primary hidden" id="nextQuestion">Nästa fråga →</button></div></div>
+<div class="panel hidden" id="quizResults"><span class="eyebrow">Quiz avslutat</span><h2 class="sectionTitle">Ditt resultat</h2><div class="score" id="finalScore">0 / 20</div><p id="finalMessage" class="sub"></p><div class="resultGrid"><div><strong id="resultCorrect">0</strong><span>Rätt svar</span></div><div><strong id="resultWrong">0</strong><span>Fel svar</span></div><div><strong id="resultPercent">0 %</strong><span>Andel rätt</span></div></div><div class="row"><button class="btn primary" id="retryQuiz">Gör ett nytt quiz</button><button class="btn" id="showReview">Visa genomgång</button></div><div class="hidden" id="reviewList" style="margin-top:25px"></div></div>
+</section>
+
+<section id="termListSection" class="hidden">
+<div class="panel termListPanel">
+<h2 class="sectionTitle">Begreppslista</h2>
+<p class="sub">Alla begrepp och definitioner samlade på ett ställe.</p>
+<div class="termListActions"><button class="btn" id="backToCards" type="button">← Tillbaka till begreppsträningen</button><button class="btn primary" id="downloadTermPdf" type="button">Ladda ner som PDF</button></div>
+<div id="termListEntries" class="termListEntries"></div>
+</div>
+</section>
+</main>
+<script>
+'use strict';
+const CONTENT={
+  "cards": [
+    {
+      "id": "dr01",
+      "t": "Demokrati",
+      "d": "Folkstyre. Medborgarna har inflytande över politiska beslut, bland annat genom att välja sina representanter."
+    },
+    {
+      "id": "dr02",
+      "t": "Direkt demokrati",
+      "d": "Medborgarna röstar själva i politiska frågor, till exempel i folkomröstningar."
+    },
+    {
+      "id": "dr03",
+      "t": "Representativ demokrati",
+      "d": "Medborgarna väljer politiker som fattar politiska beslut på deras uppdrag."
+    },
+    {
+      "id": "dr04",
+      "t": "Demokratins regelbok",
+      "d": "Sex grundläggande kriterier som är nödvändiga, men inte tillräckliga, för demokrati."
+    },
+    {
+      "id": "dr05",
+      "t": "Regelbundna politiska val och fri partibildning",
+      "d": "Val hålls med jämna mellanrum så att makten kan bytas ut. Det ska vara tillåtet att bilda partier och finnas minst två att välja mellan."
+    },
+    {
+      "id": "dr06",
+      "t": "Allmän och lika rösträtt",
+      "d": "Vuxna medborgare har rösträtt oavsett exempelvis kön, klass och etnicitet. Varje röst är lika mycket värd."
+    },
+    {
+      "id": "dr07",
+      "t": "Valhemlighet",
+      "d": "Ingen ska behöva avslöja hur den röstar. Valet ska ske utan kontroll eller påtryckningar."
+    },
+    {
+      "id": "dr08",
+      "t": "Fri opinionsbildning",
+      "d": "Människor får bilda och uttrycka åsikter, påverka andra och delta i samhällsdebatten."
+    },
+    {
+      "id": "dr09",
+      "t": "Majoritetsprincipen",
+      "d": "Det förslag som får flest röster vinner, samtidigt som minoriteters rättigheter måste skyddas."
+    },
+    {
+      "id": "dr10",
+      "t": "Rättssäkerhet",
+      "d": "Lagar ska gälla lika för alla, domstolar ska vara oberoende och den anklagade ska kunna få ett rättvist försvar."
+    },
+    {
+      "id": "dr11",
+      "t": "Pluralism",
+      "d": "Mångfald av idéer, åsikter och grupper i samhället."
+    },
+    {
+      "id": "dr12",
+      "t": "Pressfrihet",
+      "d": "Journalister och medier ska kunna granska makten utan hot eller censur."
+    },
+    {
+      "id": "dr13",
+      "t": "Rättsstat",
+      "d": "En stat där lagar och domstolar skyddar människor mot godtyckliga beslut."
+    },
+    {
+      "id": "dr14",
+      "t": "Minoritetsrättigheter",
+      "d": "Rättigheter som skyddar grupper med exempelvis en annan religion, kultur eller åsikt än majoritetens."
+    },
+    {
+      "id": "dr15",
+      "t": "Censur",
+      "d": "När staten eller andra makthavare styr eller begränsar vad som får sägas eller publiceras."
+    },
+    {
+      "id": "dr16",
+      "t": "Opposition",
+      "d": "Partier eller politiker som står utanför den styrande makten och kan kritisera dess beslut."
+    },
+    {
+      "id": "dr17",
+      "t": "Organisationsfrihet",
+      "d": "Rätten att bilda och delta i föreningar och organisationer."
+    },
+    {
+      "id": "dr18",
+      "t": "Demonstrationsfrihet",
+      "d": "Rätten att anordna och delta i demonstrationer på allmän plats."
+    },
+    {
+      "id": "dr19",
+      "t": "Yttrandefrihet",
+      "d": "Rätten att uttrycka och sprida åsikter och information utan otillåten censur."
+    },
+    {
+      "id": "dr20",
+      "t": "Majoritetens tyranni",
+      "d": "När majoriteten använder sin makt för att begränsa eller kränka minoriteters rättigheter."
+    },
+    {
+      "id": "dr21",
+      "t": "Legalitetsprincipen",
+      "d": "Offentlig makt ska ha stöd i lag. Ingen får straffas för något som inte var förbjudet i lag när det gjordes."
+    }
+  ],
+  "questions": [
+    {
+      "id": "dr-q01",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Fakta & begrepp",
+      "question": "Vad är den viktigaste skillnaden mellan direkt och representativ demokrati?",
+      "options": [
+        "I direkt demokrati väljs politiker oftare än i representativ demokrati.",
+        "I direkt demokrati fattar medborgarna själva beslut i politiska frågor.",
+        "I representativ demokrati saknar medborgarna möjlighet att påverka politiken.",
+        "I representativ demokrati måste alla politiska beslut godkännas i folkomröstningar."
+      ],
+      "answer": 1,
+      "explanation": "Direkt demokrati innebär att medborgarna själva tar ställning i sakfrågor. I representativ demokrati väljer de politiker som fattar besluten.",
+      "concepts": [
+        "Direkt demokrati",
+        "Representativ demokrati"
+      ]
+    },
+    {
+      "id": "dr-q02",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Analys & samband",
+      "question": "Ett land håller val vart fjärde år. Regeringen förbjuder däremot nya partier att bildas. Vilken slutsats är mest rimlig?",
+      "options": [
+        "Landet uppfyller kravet på valhemlighet men saknar majoritetsprincipen.",
+        "Landet har fri opinionsbildning men begränsad pressfrihet.",
+        "Landet har regelbundna val men uppfyller inte kravet på fri partibildning.",
+        "Landet uppfyller demokratins regelbok eftersom valen sker regelbundet."
+      ],
+      "answer": 2,
+      "explanation": "Regelbundna val räcker inte. Fri partibildning är en del av samma demokratiska kriterium.",
+      "concepts": [
+        "Regelbundna politiska val och fri partibildning",
+        "Demokratins regelbok"
+      ]
+    },
+    {
+      "id": "dr-q03",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Tillämpning & case",
+      "question": "I ett land får alla vuxna medborgare rösta, men röster från personer med hög inkomst räknas dubbelt. Vilken princip bryts tydligast?",
+      "options": [
+        "Principen om lika rösträtt.",
+        "Principen om fri partibildning.",
+        "Principen om valhemlighet.",
+        "Principen om fri opinionsbildning."
+      ],
+      "answer": 0,
+      "explanation": "Alla får rösta, men rösterna väger olika tungt. Det strider mot lika rösträtt.",
+      "concepts": [
+        "Allmän och lika rösträtt"
+      ]
+    },
+    {
+      "id": "dr-q04",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Analys & samband",
+      "question": "Varför är valhemligheten viktig även i ett land där alla medborgare har rösträtt?",
+      "options": [
+        "Den gör att politiska partier får samma antal röster i varje val.",
+        "Den garanterar att valresultatet accepteras av alla medborgare.",
+        "Den hindrar väljarna från att diskutera sina politiska åsikter.",
+        "Den skyddar väljare mot kontroll och påtryckningar kring deras val."
+      ],
+      "answer": 3,
+      "explanation": "Rösträtten är inte fullt fri om människor riskerar påtryckningar eller repressalier för hur de röstar.",
+      "concepts": [
+        "Valhemlighet"
+      ]
+    },
+    {
+      "id": "dr-q05",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Fakta & begrepp",
+      "question": "Vilken beskrivning fångar bäst begreppet pluralism?",
+      "options": [
+        "Att den politiska majoriteten får fatta beslut utan motstånd.",
+        "Att olika åsikter, idéer och grupper kan finnas och verka i samhället.",
+        "Att alla politiska partier måste vara överens om viktiga frågor.",
+        "Att medborgarna får välja mellan minst två partier i ett val."
+      ],
+      "answer": 1,
+      "explanation": "Pluralism handlar om mångfald av åsikter, idéer och grupper. Fri partibildning är en del av ett demokratiskt system men inte hela innebörden av pluralism.",
+      "concepts": [
+        "Pluralism"
+      ]
+    },
+    {
+      "id": "dr-q06",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Tillämpning & case",
+      "question": "En journalist avslöjar att en minister har missbrukat sin makt. Regeringen förbjuder tidningen att publicera granskningen. Vilket begrepp beskriver regeringens agerande bäst?",
+      "options": [
+        "Opposition, eftersom regeringen möter politisk kritik.",
+        "Majoritetsprincip, eftersom regeringen kan fatta beslut.",
+        "Censur, eftersom makthavare hindrar information från att spridas.",
+        "Valhemlighet, eftersom uppgifterna gäller en politiker."
+      ],
+      "answer": 2,
+      "explanation": "Att förbjuda publicering av en granskning är ett exempel på censur och ett ingrepp i pressfriheten.",
+      "concepts": [
+        "Censur",
+        "Pressfrihet"
+      ]
+    },
+    {
+      "id": "dr-q07",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Analys & samband",
+      "question": "Ett parlament röstar igenom ett förbud mot att en religiös minoritet får bilda föreningar. Varför är beslutet problematiskt ur demokratisk synvinkel?",
+      "options": [
+        "Ett majoritetsbeslut kan ändå kränka minoriteters rättigheter.",
+        "En minoritet måste alltid få fler röster än majoriteten.",
+        "Majoritetsprincipen gäller bara frågor som rör ekonomin.",
+        "Organisationsfrihet gäller enbart politiska partier."
+      ],
+      "answer": 0,
+      "explanation": "Majoritetsprincipen måste förenas med respekt för minoritetsrättigheter. Annars finns en risk för majoritetens tyranni.",
+      "concepts": [
+        "Majoritetsprincipen",
+        "Minoritetsrättigheter",
+        "Majoritetens tyranni"
+      ]
+    },
+    {
+      "id": "dr-q08",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Fakta & begrepp",
+      "question": "Vilken funktion har oppositionen i en representativ demokrati?",
+      "options": [
+        "Att kontrollera domstolarnas beslut och avgöra vilka lagar som gäller.",
+        "Att säkerställa att regeringen alltid får stöd för sina förslag.",
+        "Att ersätta medborgarnas rösträtt mellan de politiska valen.",
+        "Att granska den styrande makten och föreslå alternativ till dess politik."
+      ],
+      "answer": 3,
+      "explanation": "Oppositionen kan kritisera och granska makthavare och presentera andra politiska förslag.",
+      "concepts": [
+        "Opposition"
+      ]
+    },
+    {
+      "id": "dr-q09",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Tillämpning & case",
+      "question": "En domare ska avgöra ett mål där en minister är anklagad. Regeringen kräver att domaren ska döma till ministerns fördel. Vilken demokratisk princip hotas tydligast?",
+      "options": [
+        "Fri opinionsbildning, eftersom politiker får uttrycka sina åsikter.",
+        "Rättssäkerhet, eftersom domstolar ska vara oberoende av politiker.",
+        "Valhemlighet, eftersom ministern tillhör ett politiskt parti.",
+        "Majoritetsprincipen, eftersom regeringen företräder många väljare."
+      ],
+      "answer": 1,
+      "explanation": "Oberoende domstolar är centrala för rättssäkerheten. Politiker ska inte kunna bestämma hur domstolar dömer.",
+      "concepts": [
+        "Rättssäkerhet"
+      ]
+    },
+    {
+      "id": "dr-q10",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Analys & samband",
+      "question": "Varför är de sex kriterierna i Demokratins regelbok nödvändiga men inte tillräckliga för demokrati?",
+      "options": [
+        "De beskriver endast hur politiska partier ska organiseras.",
+        "De gäller bara vid val och saknar betydelse mellan valen.",
+        "De anger grundkrav, men ett demokratiskt samhälle kräver mer än att dessa formellt uppfylls.",
+        "De ersätter behovet av att medborgarna deltar i samhällsdebatten."
+      ],
+      "answer": 2,
+      "explanation": "I genomgången beskrivs kriterierna som nödvändiga men inte tillräckliga. Att de finns på papperet garanterar inte att demokratin fungerar i praktiken.",
+      "concepts": [
+        "Demokratins regelbok",
+        "Demokrati"
+      ]
+    },
+    {
+      "id": "dr-q11",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Fakta & begrepp",
+      "question": "Vilken beskrivning stämmer bäst med begreppet rättsstat?",
+      "options": [
+        "Ett samhälle där regeringen avgör vilka domar som ska verkställas.",
+        "Ett samhälle där majoriteten kan ändra lagar för enskilda personer.",
+        "Ett samhälle där domstolar ersätter parlamentet i politiska frågor.",
+        "Ett samhälle där lagar och oberoende domstolar skyddar mot godtycklig makt."
+      ],
+      "answer": 3,
+      "explanation": "I en rättsstat är även makthavarna bundna av lagar. Domstolar ska kunna skydda människor mot godtyckliga beslut.",
+      "concepts": [
+        "Rättsstat"
+      ]
+    },
+    {
+      "id": "dr-q12",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Tillämpning & case",
+      "question": "En elevgrupp vill starta en förening för att påverka kommunens miljöpolitik. Kommunen förbjuder gruppen att bilda föreningen eftersom den kritiserar kommunledningen. Vilken frihet begränsas mest direkt?",
+      "options": [
+        "Organisationsfriheten.",
+        "Demonstrationsfriheten.",
+        "Valhemligheten.",
+        "Den lika rösträtten."
+      ],
+      "answer": 0,
+      "explanation": "Organisationsfrihet innebär rätten att bilda och delta i föreningar. Här är det just bildandet av föreningen som hindras.",
+      "concepts": [
+        "Organisationsfrihet"
+      ]
+    },
+    {
+      "id": "dr-q13",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Analys & samband",
+      "question": "Ett land tillåter flera partier och hemliga val, men journalister får inte granska regeringen. Varför är landet ändå inte fullt demokratiskt enligt regelboken?",
+      "options": [
+        "Eftersom valhemligheten kräver att medierna håller sina källor hemliga.",
+        "Eftersom pressfrihet är en del av den fria opinionsbildningen.",
+        "Eftersom oppositionen måste vinna minst vartannat val.",
+        "Eftersom majoritetsprincipen förbjuder politisk granskning."
+      ],
+      "answer": 1,
+      "explanation": "Fri opinionsbildning omfattar bland annat pressfrihet. Utan möjlighet att granska makten är ett viktigt demokratiskt kriterium begränsat.",
+      "concepts": [
+        "Fri opinionsbildning",
+        "Pressfrihet"
+      ]
+    },
+    {
+      "id": "dr-q14",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Fakta & begrepp",
+      "question": "Vad innebär legalitetsprincipen i relation till statens makt?",
+      "options": [
+        "Att staten får fatta beslut som saknar stöd i lag om majoriteten vill det.",
+        "Att domstolar får skapa nya straff för handlingar som redan har begåtts.",
+        "Att offentlig makt ska utövas med stöd i lag och straff kräver lagstöd.",
+        "Att politiska partier får undanta sina företrädare från vissa lagar."
+      ],
+      "answer": 2,
+      "explanation": "Legalitetsprincipen begränsar godtycklig maktutövning. Offentlig makt behöver lagstöd, och ingen ska straffas utan stöd i lag.",
+      "concepts": [
+        "Legalitetsprincipen"
+      ]
+    },
+    {
+      "id": "dr-q15",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Tillämpning & case",
+      "question": "En politisk grupp vill ordna en fredlig manifestation på ett torg för att protestera mot regeringens beslut. Myndigheterna förbjuder manifestationen enbart för att de ogillar gruppens budskap. Vilken rättighet begränsas tydligast?",
+      "options": [
+        "Rätten till lika rösträtt.",
+        "Rätten till valhemlighet.",
+        "Rätten till oberoende domstolar.",
+        "Rätten till demonstrationsfrihet."
+      ],
+      "answer": 3,
+      "explanation": "Demonstrationsfriheten skyddar möjligheten att samlas och uttrycka åsikter genom demonstrationer på allmän plats.",
+      "concepts": [
+        "Demonstrationsfrihet"
+      ]
+    },
+    {
+      "id": "dr-q16",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Analys & samband",
+      "question": "Ett land har flera politiska partier, men nästan alla tidningar kontrolleras av regeringen. Varför är detta ett demokratiskt problem?",
+      "options": [
+        "Partiernas möjlighet att bilda regeringar blir automatiskt begränsad.",
+        "Medborgarnas möjlighet att möta olika perspektiv och granska makten begränsas.",
+        "Domstolarnas möjlighet att tolka landets lagar försvinner.",
+        "Medborgarnas röster får olika värde beroende på partitillhörighet."
+      ],
+      "answer": 1,
+      "explanation": "Fri opinionsbildning och pressfrihet är viktiga för att olika perspektiv ska kunna komma fram. Flera partier räcker inte om informationen samtidigt kontrolleras.",
+      "concepts": [
+        "Fri opinionsbildning",
+        "Pressfrihet",
+        "Pluralism"
+      ]
+    },
+    {
+      "id": "dr-q17",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Tillämpning & case",
+      "question": "En kommun tillåter en grupp att demonstrera för regeringens politik men förbjuder en annan grupp att demonstrera mot den, enbart på grund av dess åsikter. Vilken slutsats är mest rimlig?",
+      "options": [
+        "Kommunen skyddar organisationsfriheten genom att begränsa politiska konflikter.",
+        "Kommunen tillämpar majoritetsprincipen genom att välja vilka åsikter som får höras.",
+        "Kommunen upprätthåller valhemligheten genom att begränsa offentliga protester.",
+        "Kommunen begränsar demonstrationsfriheten genom att behandla åsikter olika."
+      ],
+      "answer": 3,
+      "explanation": "Demonstrationsfriheten innebär att människor ska kunna uttrycka åsikter genom demonstrationer. Att förbjuda en demonstration enbart för dess politiska budskap begränsar denna frihet.",
+      "concepts": [
+        "Demonstrationsfrihet"
+      ]
+    },
+    {
+      "id": "dr-q18",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Fakta & begrepp",
+      "question": "Vad skiljer främst organisationsfrihet från demonstrationsfrihet?",
+      "options": [
+        "Organisationsfrihet gäller att bilda och delta i grupper, medan demonstrationsfrihet gäller offentliga manifestationer.",
+        "Organisationsfrihet gäller politiska val, medan demonstrationsfrihet gäller granskning av makthavare.",
+        "Organisationsfrihet gäller journalister, medan demonstrationsfrihet gäller politiska partier.",
+        "Organisationsfrihet gäller domstolar, medan demonstrationsfrihet gäller offentliga myndigheter."
+      ],
+      "answer": 0,
+      "explanation": "Organisationsfrihet handlar om rätten att organisera sig i föreningar och grupper. Demonstrationsfrihet handlar om rätten att anordna och delta i demonstrationer.",
+      "concepts": [
+        "Organisationsfrihet",
+        "Demonstrationsfrihet"
+      ]
+    },
+    {
+      "id": "dr-q19",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Analys & samband",
+      "question": "Varför kan en opposition vara viktig även om regeringen har fått stöd av en majoritet av väljarna?",
+      "options": [
+        "Oppositionen kan upphäva valresultatet när regeringens beslut blir impopulära.",
+        "Oppositionen ska se till att alla politiska förslag får lika många röster.",
+        "Oppositionen kan granska makthavarna och visa att det finns politiska alternativ.",
+        "Oppositionen kan ersätta oberoende domstolar när regeringen kritiseras."
+      ],
+      "answer": 2,
+      "explanation": "Majoritetsstöd ger inte regeringen rätt att slippa granskning. Oppositionen bidrar med kritik och alternativa förslag, vilket stärker det demokratiska samtalet.",
+      "concepts": [
+        "Opposition",
+        "Majoritetsprincipen"
+      ]
+    },
+    {
+      "id": "dr-q20",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Tillämpning & case",
+      "question": "En regering beslutar att en person ska straffas för en handling som var tillåten när den utfördes. Vilken princip är särskilt relevant?",
+      "options": [
+        "Majoritetsprincipen, eftersom regeringen har stöd för beslutet.",
+        "Legalitetsprincipen, eftersom straff måste ha stöd i lag som gällde vid handlingen.",
+        "Valhemligheten, eftersom medborgarna inte får kontrolleras av staten.",
+        "Pressfriheten, eftersom information om straff måste kunna publiceras."
+      ],
+      "answer": 1,
+      "explanation": "Legalitetsprincipen innebär bland annat att ingen får straffas för en handling som inte var straffbar enligt lag när den utfördes.",
+      "concepts": [
+        "Legalitetsprincipen"
+      ]
+    },
+    {
+      "id": "dr-q21",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Analys & samband",
+      "question": "Vilken situation visar tydligast att ett samhälle kan sakna verklig pluralism trots att flera partier finns?",
+      "options": [
+        "Partierna får konkurrera om väljarnas röster vid regelbundna val.",
+        "Medborgarna bildar föreningar för att driva olika samhällsfrågor.",
+        "Oppositionspartierna presenterar alternativ till regeringens politik.",
+        "Grupper med avvikande åsikter hindras från att delta i samhällsdebatten."
+      ],
+      "answer": 3,
+      "explanation": "Pluralism innebär mångfald av idéer, åsikter och grupper. Om vissa perspektiv systematiskt stängs ute fungerar inte denna mångfald i praktiken.",
+      "concepts": [
+        "Pluralism"
+      ]
+    },
+    {
+      "id": "dr-q22",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Fakta & begrepp",
+      "question": "Vilket påstående beskriver bäst skillnaden mellan censur och pressfrihet?",
+      "options": [
+        "Censur innebär att information begränsas, medan pressfrihet skyddar möjligheten att publicera och granska.",
+        "Censur innebär att medier granskar staten, medan pressfrihet innebär att staten granskar medier.",
+        "Censur innebär att partier konkurrerar om makten, medan pressfrihet innebär att journalister röstar.",
+        "Censur innebär att domstolar tolkar lagar, medan pressfrihet innebär att politiker skriver lagar."
+      ],
+      "answer": 0,
+      "explanation": "Censur handlar om att kontrollera eller förhindra spridning av information. Pressfrihet innebär att medier ska kunna publicera och granska makten utan sådan otillbörlig kontroll.",
+      "concepts": [
+        "Censur",
+        "Pressfrihet"
+      ]
+    },
+    {
+      "id": "dr-q23",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Tillämpning & case",
+      "question": "Ett parlament beslutar med stor majoritet att en viss minoritet inte längre får bilda egna föreningar. Vilket begrepp beskriver bäst risken med beslutet?",
+      "options": [
+        "Representativ demokrati, eftersom folkvalda politiker fattar beslut.",
+        "Valhemlighet, eftersom minoritetens politiska val kan påverkas.",
+        "Majoritetens tyranni, eftersom majoriteten begränsar minoritetens rättigheter.",
+        "Fri partibildning, eftersom parlamentet beslutar om politiska organisationer."
+      ],
+      "answer": 2,
+      "explanation": "Majoritetens tyranni uppstår när en majoritet använder sin makt för att inskränka minoriteters rättigheter. Ett beslut blir inte demokratiskt rättfärdigat enbart för att många röstar för det.",
+      "concepts": [
+        "Majoritetens tyranni",
+        "Minoritetsrättigheter"
+      ]
+    },
+    {
+      "id": "dr-q24",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Analys & samband",
+      "question": "Ett land har en grundlag som säger att alla är lika inför lagen. Samtidigt behandlar domstolarna regeringens anhängare mildare än dess kritiker. Vad visar situationen?",
+      "options": [
+        "Att lika rösträtt fungerar även om domstolarna dömer olika.",
+        "Att majoritetsprincipen automatiskt väger tyngre än rättssäkerheten.",
+        "Att oppositionens uppgift är att bestämma hur domstolar ska döma.",
+        "Att rättssäkerhet kräver att principerna följs i praktiken, inte bara finns i lagtexten."
+      ],
+      "answer": 3,
+      "explanation": "Likhet inför lagen är en del av rättssäkerheten. Det räcker inte att principen finns nedskriven om domstolarna inte tillämpar den.",
+      "concepts": [
+        "Rättssäkerhet",
+        "Rättsstat"
+      ]
+    },
+    {
+      "id": "dr-q25",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Fakta & begrepp",
+      "question": "Vilken beskrivning passar bäst in på begreppet minoritetsrättigheter?",
+      "options": [
+        "Att den största politiska gruppen alltid får bestämma över andra grupper.",
+        "Att grupper med andra åsikter, religioner eller kulturer har rättigheter som ska skyddas.",
+        "Att mindre politiska partier automatiskt får lika många mandat som större partier.",
+        "Att grupper som förlorar ett val får fatta nästa politiska beslut."
+      ],
+      "answer": 1,
+      "explanation": "Minoritetsrättigheter skyddar grupper som skiljer sig från majoriteten, exempelvis genom religion, kultur eller åsikter. De är ett skydd mot majoritetens tyranni.",
+      "concepts": [
+        "Minoritetsrättigheter"
+      ]
+    },
+    {
+      "id": "dr-q26",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Tillämpning & case",
+      "question": "I ett land får medborgarna rösta anonymt, men en arbetsgivare kräver att anställda berättar vilket parti de röstat på. De som vägrar hotas med uppsägning. Vilket demokratiskt skydd försöker arbetsgivaren kringgå?",
+      "options": [
+        "Fri partibildning, eftersom anställda måste kunna bilda nya partier.",
+        "Majoritetsprincipen, eftersom arbetsgivaren inte får avgöra valresultatet.",
+        "Valhemligheten, eftersom väljare ska skyddas mot krav och påtryckningar om hur de röstar.",
+        "Organisationsfriheten, eftersom anställda ska kunna bilda politiska föreningar."
+      ],
+      "answer": 2,
+      "explanation": "Valhemligheten skyddar individens möjlighet att rösta utan att behöva avslöja sitt val för staten eller andra. Hot från en arbetsgivare kan underminera detta skydd.",
+      "concepts": [
+        "Valhemlighet"
+      ]
+    },
+    {
+      "id": "dr-q27",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Analys & samband",
+      "question": "Varför kan fri opinionsbildning vara viktig för att medborgarnas rösträtt ska få verklig betydelse?",
+      "options": [
+        "Medborgarna behöver kunna möta olika åsikter och information innan de tar politisk ställning.",
+        "Medborgarna behöver kunna kräva att alla partier har samma politiska program.",
+        "Medborgarna behöver kunna bestämma hur domstolar ska tolka lagarna.",
+        "Medborgarna behöver kunna rösta flera gånger om de har starka politiska åsikter."
+      ],
+      "answer": 0,
+      "explanation": "Rösträtten blir mer meningsfull när människor fritt kan ta del av information, diskutera och bilda egna uppfattningar. Därför hänger fri opinionsbildning och demokratiska val samman.",
+      "concepts": [
+        "Fri opinionsbildning",
+        "Allmän och lika rösträtt",
+        "Yttrandefrihet"
+      ]
+    },
+    {
+      "id": "dr-q28",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Tillämpning & case",
+      "question": "En grupp medborgare vill själva avgöra en lokal politisk fråga genom en omröstning i stället för att låta de valda politikerna fatta beslutet. Vilken demokratiform efterfrågar de?",
+      "options": [
+        "Representativ demokrati, eftersom politikerna ska rösta i medborgarnas ställe.",
+        "Pluralism, eftersom flera olika åsikter får förekomma i debatten.",
+        "Rättsstat, eftersom beslutet ska prövas av en oberoende domstol.",
+        "Direkt demokrati, eftersom medborgarna själva vill rösta i sakfrågan."
+      ],
+      "answer": 3,
+      "explanation": "Direkt demokrati innebär att medborgarna själva röstar i politiska sakfrågor. I representativ demokrati fattas besluten av valda representanter.",
+      "concepts": [
+        "Direkt demokrati",
+        "Representativ demokrati"
+      ]
+    },
+    {
+      "id": "dr-q29",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Fakta & begrepp",
+      "question": "Vad är det centrala i begreppet rättsstat?",
+      "options": [
+        "Att politiska majoriteter får avgöra vilka medborgare som ska omfattas av lagen.",
+        "Att offentlig makt är bunden av lagar och medborgarna skyddas mot godtyckliga beslut.",
+        "Att regeringen får styra domstolarna för att säkerställa att lagarna följs.",
+        "Att parlamentet ersätter domstolarna när politiskt viktiga mål ska avgöras."
+      ],
+      "answer": 1,
+      "explanation": "I en rättsstat är makthavare bundna av lagen. Oberoende domstolar och rättssäkerhet skyddar människor mot godtycklig maktutövning.",
+      "concepts": [
+        "Rättsstat"
+      ]
+    },
+    {
+      "id": "dr-q30",
+      "lesson": 1,
+      "section": "Demokratins regelbok",
+      "type": "Analys & samband",
+      "question": "Ett land uppfyller formellt demokratins sex kriterier, men många människor vågar ändå inte uttrycka kritik mot makthavarna. Vilken slutsats ligger närmast genomgångens budskap?",
+      "options": [
+        "Landet är fullt demokratiskt eftersom de sex kriterierna finns i lagstiftningen.",
+        "Landet saknar demokrati enbart om det också saknar regelbundna politiska val.",
+        "Demokratins regelbok innehåller grundkrav, men demokratin måste också fungera i praktiken.",
+        "Demokratins regelbok blir överflödig när medborgarna kan välja mellan olika partier."
+      ],
+      "answer": 2,
+      "explanation": "Genomgången betonar att de sex kriterierna är nödvändiga men inte tillräckliga. Demokratiska friheter behöver också fungera i människors vardag.",
+      "concepts": [
+        "Demokrati",
+        "Demokratins regelbok",
+        "Yttrandefrihet"
+      ]
+    }
+  ]
+};
+const CARDS=CONTENT.cards, BANK=CONTENT.questions, ROUND_SIZE=20;
+const $=id=>document.getElementById(id);
+$('bankQuestionCount').textContent=BANK.length;
+const shuffled=items=>{const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+// Varje fråga har ett lektionsnummer. Vid minst fyra lektioner används
+// 8 frågor från de två senaste, 6 från mitten och 6 från början.
+// Om en grupp har för få frågor fylls återstående platser från andra grupper.
+function pickQuestions(bank,limit=ROUND_SIZE){
+ const count=Math.min(limit,bank.length), lessons=[...new Set(bank.map(q=>q.lesson))].sort((a,b)=>a-b);
+ if(lessons.length<4)return shuffled(bank).slice(0,count);
+ const recent=new Set(lessons.slice(-2));
+ const oldestCount=Math.max(1,Math.floor((lessons.length-2)/2));
+ const early=new Set(lessons.slice(0,oldestCount));
+ const groups=[bank.filter(q=>recent.has(q.lesson)),bank.filter(q=>!recent.has(q.lesson)&&!early.has(q.lesson)),bank.filter(q=>early.has(q.lesson))];
+ const targets=[Math.round(count*.4),Math.round(count*.3),count-Math.round(count*.4)-Math.round(count*.3)];
+ const selected=[],used=new Set();
+ groups.forEach((group,i)=>{for(const q of shuffled(group).slice(0,targets[i])){selected.push(q);used.add(q.id)}});
+ for(const q of shuffled(bank)){if(selected.length>=count)break;if(!used.has(q.id)){selected.push(q);used.add(q.id)}}
+ return shuffled(selected);
+}
+function setMode(mode){const home=mode==='home',cards=mode==='cards';$('homeHero').classList.toggle('hidden',!home);$('homeChoices').classList.toggle('hidden',!home);$('exerciseBack').classList.toggle('hidden',home);$('cardsSection').classList.toggle('hidden',!cards);$('termListSection').classList.toggle('hidden',mode!=='list');$('quizSection').classList.toggle('hidden',mode!=='quiz');window.scrollTo(0,0);}
+$('chooseCards').onclick=()=>setMode('cards');$('chooseQuiz').onclick=()=>{setMode('quiz');startQuiz()};$('backToHome').onclick=()=>setMode('home');$('openTermList').onclick=()=>setMode('list');$('backToCards').onclick=()=>setMode('cards');$('downloadTermPdf').onclick=()=>window.print();
+// Begreppskort. Befintlig lagringsnyckel bevaras så tidigare träning finns kvar.
+const STORAGE_KEY='kalles-demokrati-begrepp-v1';let stored={};try{stored=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}')||{}}catch{}
+const boxes={};CARDS.forEach(c=>boxes[c.id]=[1,2,3].includes(stored[c.id])?stored[c.id]:0);
+let deck=CARDS.map(c=>c.id),cardIndex=0,flipped=false,cardFilter='all';
+function saveCards(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(boxes))}catch{}}
+function renderCards(){const counts=[0,0,0,0];CARDS.forEach(c=>counts[boxes[c.id]]++);counts.forEach((n,i)=>$('count'+i).textContent=n);$('cardBar').style.width=100*counts[3]/CARDS.length+'%';$('cardMode').textContent=cardFilter==='all'?'Alla begrepp':'Repetera svåra';if(!deck.length){$('cardCounter').textContent='Inga kort kvar';$('cardFace').textContent='Klart';$('cardContent').textContent='Du har lagt alla kort i ”Kan begreppet”.';$('sortArea').classList.add('hidden');['prevCard','nextCard','flipCard'].forEach(id=>$(id).disabled=true);return}cardIndex=(cardIndex+deck.length)%deck.length;const c=CARDS.find(c=>c.id===deck[cardIndex]);$('cardCounter').textContent=`Kort ${cardIndex+1} av ${deck.length}`;$('cardFace').textContent=flipped?'Definition':'Begrepp';$('cardContent').textContent=flipped?c.d:c.t;$('flash').classList.toggle('flipped',flipped);$('sortArea').classList.toggle('hidden',!flipped);$('flipCard').textContent=flipped?'Visa begrepp':'Visa definition';$('flipCard').disabled=false;$('prevCard').disabled=$('nextCard').disabled=deck.length<2;}
+function flip(){if(deck.length){flipped=!flipped;renderCards()}}
+function moveCard(step){if(deck.length){cardIndex=(cardIndex+step+deck.length)%deck.length;flipped=false;renderCards()}}
+function filterCards(which){cardFilter=which;deck=CARDS.filter(c=>which==='all'||boxes[c.id]!==3).map(c=>c.id);cardIndex=0;flipped=false;$('allCards').classList.toggle('primary',which==='all');$('reviewCards').classList.toggle('primary',which==='review');renderCards()}
+function sortCard(box){if(!deck.length)return;boxes[deck[cardIndex]]=box;saveCards();if(cardFilter==='review'&&box===3){deck.splice(cardIndex,1);if(cardIndex>=deck.length)cardIndex=0}else cardIndex=(cardIndex+1)%deck.length;flipped=false;renderCards()}
+$('flash').onclick=$('flipCard').onclick=flip;$('prevCard').onclick=()=>moveCard(-1);$('nextCard').onclick=()=>moveCard(1);document.querySelectorAll('[data-box]').forEach(b=>b.onclick=()=>sortCard(Number(b.dataset.box)));$('allCards').onclick=()=>filterCards('all');$('reviewCards').onclick=()=>filterCards('review');$('resetCards').onclick=()=>{if(confirm('Vill du nollställa din begreppsträning?')){CARDS.forEach(c=>boxes[c.id]=0);saveCards();filterCards('all')}};
+function renderGlossary(){const term=$('searchCards').value.toLocaleLowerCase('sv').trim();$('glossary').replaceChildren();for(const c of CARDS.filter(c=>(c.t+' '+c.d).toLocaleLowerCase('sv').includes(term))){const details=document.createElement('details'),summary=document.createElement('summary'),p=document.createElement('p');summary.textContent=c.t;p.textContent=c.d;details.append(summary,p);$('glossary').append(details)}}$('searchCards').oninput=renderGlossary;
+// Quiz: frågor och svarsalternativ blandas vid varje ny omgång.
+let round=[],at=0,score=0,answered=false,history=[];
+function showQuizScreen(which){for(const [key,id] of Object.entries({play:'quizPlay',results:'quizResults'}))$(id).classList.toggle('hidden',key!==which)}
+function startQuiz(){round=pickQuestions(BANK).map(q=>({...q,choices:shuffled(q.options.map((label,i)=>({label,originalIndex:i})))}));at=0;score=0;history=[];showQuizScreen('play');renderQuestion()}
+function renderQuestion(){answered=false;const q=round[at];$('quizCount').textContent=`Fråga ${at+1} av ${round.length}`;$('quizCorrect').textContent=`${score} rätt hittills`;$('quizBar').style.width=100*at/round.length+'%';$('questionText').textContent=q.question;$('answerList').replaceChildren();$('feedback').classList.add('hidden');$('feedback').classList.remove('bad');$('nextQuestion').classList.add('hidden');q.choices.forEach((choice,i)=>{const btn=document.createElement('button');btn.className='answer';btn.type='button';const letter=document.createElement('span'),label=document.createElement('span');letter.className='letter';letter.textContent='ABCD'[i];label.textContent=choice.label;btn.append(letter,label);btn.onclick=()=>chooseAnswer(i);$('answerList').append(btn)})}
+function chooseAnswer(index){if(answered)return;answered=true;const q=round[at],choice=q.choices[index],correct=choice.originalIndex===q.answer;if(correct)score++;history.push({q,chosen:choice.label,correct});[...$('answerList').children].forEach((btn,i)=>{btn.disabled=true;const isRight=q.choices[i].originalIndex===q.answer;btn.classList.toggle('correct',isRight);btn.classList.toggle('wrong',i===index&&!correct)});$('feedback').classList.remove('hidden');$('feedback').classList.toggle('bad',!correct);$('feedbackTitle').textContent=correct?'Rätt svar!':'Inte riktigt – här är förklaringen';$('feedbackText').textContent=q.explanation;$('quizCorrect').textContent=`${score} rätt hittills`;$('nextQuestion').textContent=at===round.length-1?'Visa resultat →':'Nästa fråga →';$('nextQuestion').classList.remove('hidden');}
+function nextQuestion(){if(!answered)return;if(at<round.length-1){at++;renderQuestion()}else finishQuiz()}
+function finishQuiz(){showQuizScreen('results');$('finalScore').textContent=`${score} / ${round.length}`;$('resultCorrect').textContent=score;$('resultWrong').textContent=round.length-score;$('resultPercent').textContent=Math.round(score/round.length*100)+' %';$('finalMessage').textContent=score===round.length?'Full pott! Du har visat mycket god förståelse.':score>=round.length*.75?'Bra jobbat! Läs gärna igenom de frågor du missade.':'Bra att du tränar! Använd genomgången för att se vilka begrepp du behöver repetera.';$('reviewList').classList.add('hidden');$('showReview').textContent='Visa genomgång';$('reviewList').replaceChildren();history.forEach((h,i)=>{const wrap=document.createElement('div'),title=document.createElement('h4'),chosen=document.createElement('p'),right=document.createElement('p'),expl=document.createElement('p');wrap.className='reviewItem';title.textContent=`${i+1}. ${h.q.question}`;chosen.textContent='Ditt svar: '+h.chosen;chosen.className=h.correct?'goodText':'badText';right.textContent='Rätt svar: '+h.q.options[h.q.answer];right.className='goodText';expl.textContent=h.q.explanation;wrap.append(title,chosen,right,expl);$('reviewList').append(wrap)});$('quizBar').style.width='100%'}
+$('retryQuiz').onclick=startQuiz;$('nextQuestion').onclick=nextQuestion;$('showReview').onclick=()=>{const hidden=$('reviewList').classList.toggle('hidden');$('showReview').textContent=hidden?'Visa genomgång':'Dölj genomgång'};
+function renderTermList(){const target=$('termListEntries');target.replaceChildren();CARDS.forEach((c,i)=>{const entry=document.createElement('article'),heading=document.createElement('h3'),definition=document.createElement('p');entry.className='termEntry';heading.textContent=`${i+1}. ${c.t}`;definition.textContent=c.d;entry.append(heading,definition);target.append(entry)})}
+renderCards();renderGlossary();renderTermList();
+</script>
+</body>
+</html>
