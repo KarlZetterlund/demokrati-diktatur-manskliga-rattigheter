@@ -16,7 +16,7 @@
 .exerciseBack{margin:0 0 22px}.exerciseBack .btn{font-size:13px;padding:9px 13px}
 @media(max-width:760px){.hero{margin-top:14px}.modecards{grid-template-columns:1fr;margin-top:20px;gap:12px}.mode{min-height:130px;padding:20px}.mode strong{font-size:23px}}
 .quizInstructions{color:var(--muted);font-size:14px;line-height:1.65;margin:0 0 23px;max-width:760px}
-.listAction{margin-top:20px;display:flex;justify-content:flex-start}.termListPanel{max-width:900px;margin:auto}.termListActions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}.termListEntries{display:grid;gap:0}.termEntry{padding:14px 0;border-bottom:1px solid var(--line);break-inside:avoid;page-break-inside:avoid}.termEntry h3{font-size:16px;margin:0 0 4px;color:var(--deep)}.termEntry p{margin:0;font-size:14px;line-height:1.55}.termEntry:last-child{border-bottom:0}
+.listAction{margin-top:20px;display:flex;justify-content:flex-start}.termListPanel{max-width:900px;margin:auto}.termListActions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}.termListEntries{display:grid;gap:0}.termEntry{padding:14px 0;border-bottom:1px solid var(--line);break-inside:avoid;page-break-inside:avoid}.termEntry h3{font-size:16px;margin:0 0 4px;color:var(--deep)}.termEntry p{margin:0;font-size:14px;line-height:1.55}.termEntry:last-child{border-bottom:0}.lessonTag{display:inline-block;align-self:center;border-radius:99px;background:#edf5ee;color:#426b50;padding:5px 11px;font-size:12px;font-weight:750;letter-spacing:0}.glossary .lessonTag{display:block;width:max-content;margin-top:7px;font-size:11px}.termEntry .lessonTag{margin-bottom:4px}
 @media print{@page{size:A4;margin:16mm 18mm}body{background:#fff!important;color:#222!important}.shell{max-width:none;padding:0!important}.topnav,.hero,.modecards,.exerciseBack,#cardsSection,#quizSection,.termListActions{display:none!important}#termListSection,#termListSection.hidden{display:block!important}.termListPanel{border:0;box-shadow:none;padding:0;max-width:none}.sectionTitle{font-size:24px}.termEntry{padding:9px 0;border-bottom:1px solid #ddd}.termEntry h3{font-size:12px;color:#222}.termEntry p{font-size:11px;line-height:1.4}.termListPanel .sub{font-size:11px;margin-bottom:12px}}
 </style>
 </head>
@@ -31,14 +31,14 @@
 <div class="exerciseBack hidden" id="exerciseBack"><button class="btn" id="backToHome" type="button">← Tillbaka till övningarna</button></div>
 <section id="cardsSection" class="hidden">
 <div class="training">
-<section class="panel"><h2 class="sectionTitle">Träna begrepp</h2><p class="sub">Vänd kortet och placera begreppet i rätt träningslåda.</p><div class="minihead"><span id="cardCounter">Kort 1 av 21</span><span id="cardMode">Alla begrepp</span></div><button id="flash" class="flash" type="button" aria-label="Vänd begreppskort"><span class="face" id="cardFace">Begrepp</span><strong id="cardContent"></strong><span class="tip">Klicka för att vända kortet ↻</span></button><div class="row flashActions"><button class="btn" id="prevCard">← Föregående</button><button class="btn primary" id="flipCard">Visa definition</button><button class="btn" id="nextCard">Nästa →</button></div><div class="sort hidden" id="sortArea"><p>Hur väl kan du begreppet?</p><div class="row"><button class="btn" data-box="1">Kan inte begreppet</button><button class="btn" data-box="2">Kan nästan begreppet</button><button class="btn" data-box="3">Kan begreppet</button></div></div></section>
-<aside class="panel"><h2 class="sectionTitle">Din träning</h2><p class="sub">Dina framsteg sparas automatiskt i den här webbläsaren.</p><div class="bar"><i id="cardBar"></i></div><div class="stat">Kan inte begreppet <b id="count1">0</b></div><div class="stat">Kan nästan begreppet <b id="count2">0</b></div><div class="stat">Kan begreppet <b id="count3">0</b></div><div class="stat">Inte tränade <b id="count0">21</b></div><p class="quiet">Repetera alla kort eller bara dem som du ännu inte lagt i ”Kan begreppet”.</p><div class="row"><button class="btn primary" id="allCards">Alla begrepp</button><button class="btn" id="reviewCards">Repetera svåra</button></div><button class="reset" id="resetCards">Nollställ min träning</button></aside>
+<section class="panel"><h2 class="sectionTitle">Träna begrepp</h2><p class="sub">Vänd kortet och placera begreppet i rätt träningslåda.</p><div class="minihead"><span id="cardCounter">Kort 1 av 29</span><span id="cardMode">Alla begrepp</span></div><button id="flash" class="flash" type="button" aria-label="Vänd begreppskort"><span class="lessonTag" id="cardLesson">Lektion 1 - Demokrati</span><span class="face" id="cardFace">Begrepp</span><strong id="cardContent"></strong><span class="tip">Klicka för att vända kortet ↻</span></button><div class="row flashActions"><button class="btn" id="prevCard">← Föregående</button><button class="btn primary" id="flipCard">Visa definition</button><button class="btn" id="nextCard">Nästa →</button></div><div class="sort hidden" id="sortArea"><p>Hur väl kan du begreppet?</p><div class="row"><button class="btn" data-box="1">Kan inte begreppet</button><button class="btn" data-box="2">Kan nästan begreppet</button><button class="btn" data-box="3">Kan begreppet</button></div></div></section>
+<aside class="panel"><h2 class="sectionTitle">Din träning</h2><p class="sub">Dina framsteg sparas automatiskt i den här webbläsaren.</p><div class="bar"><i id="cardBar"></i></div><div class="stat">Kan inte begreppet <b id="count1">0</b></div><div class="stat">Kan nästan begreppet <b id="count2">0</b></div><div class="stat">Kan begreppet <b id="count3">0</b></div><div class="stat">Inte tränade <b id="count0">29</b></div><p class="quiet">Repetera alla kort eller bara dem som du ännu inte lagt i ”Kan begreppet”.</p><div class="row"><button class="btn primary" id="allCards">Alla begrepp</button><button class="btn" id="reviewCards">Repetera svåra</button></div><button class="reset" id="resetCards">Nollställ min träning</button></aside>
 </div>
-<section class="catalog"><div class="cataloghead"><div><h3>Alla 21 begrepp</h3><p class="quiet">Öppna ett begrepp för att läsa definitionen.</p></div><input class="search" id="searchCards" type="search" placeholder="Sök begrepp…" aria-label="Sök begrepp"></div><div id="glossary" class="glossary"></div></section>
+<section class="catalog"><div class="cataloghead"><div><h3>Alla 29 begrepp</h3><p class="quiet">Öppna ett begrepp för att läsa definitionen.</p></div><input class="search" id="searchCards" type="search" placeholder="Sök begrepp…" aria-label="Sök begrepp"></div><div id="glossary" class="glossary"></div></section>
 <div class="listAction"><button class="btn primary" id="openTermList" type="button">Skapa begreppslista →</button></div>
 </section>
 <section id="quizSection" class="hidden">
-<div class="panel hidden" id="quizPlay"><div class="progressRow"><span id="quizCount">Fråga 1 av 20</span><span id="quizCorrect">0 rätt hittills</span></div><div class="progress"><i id="quizBar"></i></div><p class="quizInstructions">Du får 20 frågor slumpade ur frågebanken som består av <strong id="bankQuestionCount"></strong> frågor. Varje fråga har fyra alternativ och ett rätt svar. Efter ditt val får du direkt en förklaring. Frågebanken fylls på under momentet.</p><h2 class="question" id="questionText"></h2><div class="answers" id="answerList"></div><div class="feedback hidden" id="feedback" role="status" aria-live="polite"><strong id="feedbackTitle"></strong><p id="feedbackText"></p></div><div class="quizNav"><span class="quiet">Välj det alternativ du tycker är bäst.</span><button class="btn primary hidden" id="nextQuestion">Nästa fråga →</button></div></div>
+<div class="panel hidden" id="quizPlay"><div class="progressRow"><span id="quizCount">Fråga 1 av 20</span><span id="quizCorrect">0 rätt hittills</span></div><div class="progress"><i id="quizBar"></i></div><p class="quizInstructions">Du får 20 frågor slumpade ur frågebanken som består av <strong id="bankQuestionCount"></strong> frågor. Varje fråga har fyra alternativ och ett rätt svar. Efter ditt val får du direkt en förklaring. Frågebanken fylls på under momentet.</p><div class="lessonTag" id="questionLesson"></div><h2 class="question" id="questionText"></h2><div class="answers" id="answerList"></div><div class="feedback hidden" id="feedback" role="status" aria-live="polite"><strong id="feedbackTitle"></strong><p id="feedbackText"></p></div><div class="quizNav"><span class="quiet">Välj det alternativ du tycker är bäst.</span><button class="btn primary hidden" id="nextQuestion">Nästa fråga →</button></div></div>
 <div class="panel hidden" id="quizResults"><span class="eyebrow">Quiz avslutat</span><h2 class="sectionTitle">Ditt resultat</h2><div class="score" id="finalScore">0 / 20</div><p id="finalMessage" class="sub"></p><div class="resultGrid"><div><strong id="resultCorrect">0</strong><span>Rätt svar</span></div><div><strong id="resultWrong">0</strong><span>Fel svar</span></div><div><strong id="resultPercent">0 %</strong><span>Andel rätt</span></div></div><div class="row"><button class="btn primary" id="retryQuiz">Gör ett nytt quiz</button><button class="btn" id="showReview">Visa genomgång</button></div><div class="hidden" id="reviewList" style="margin-top:25px"></div></div>
 </section>
 
@@ -159,6 +159,46 @@ const CONTENT={
       "id": "dr21",
       "t": "Legalitetsprincipen",
       "d": "Offentlig makt ska ha stöd i lag. Ingen får straffas för något som inte var förbjudet i lag när det gjordes."
+    },
+    {
+      "id": "dr22",
+      "t": "Autokrati",
+      "d": "Ett styrelseskick där makten är koncentrerad till en person eller liten grupp som inte kan avsättas genom fria och rättvisa val."
+    },
+    {
+      "id": "dr23",
+      "t": "Enpartistat",
+      "d": "Ett politiskt system där ett parti har den avgörande makten och andra partier inte kan konkurrera på lika villkor."
+    },
+    {
+      "id": "dr24",
+      "t": "Militärdiktatur",
+      "d": "En diktatur där militären eller militära ledare kontrollerar den politiska makten."
+    },
+    {
+      "id": "dr25",
+      "t": "Teokrati",
+      "d": "Ett styrelseskick där religiösa ledare eller religiösa regler har en avgörande roll i den politiska makten."
+    },
+    {
+      "id": "dr26",
+      "t": "Hybridregim",
+      "d": "Ett system som förenar demokratiska inslag, som val, med auktoritära inslag som begränsad opposition."
+    },
+    {
+      "id": "dr27",
+      "t": "Auktoritär regim",
+      "d": "En regim där makten koncentreras till en ledare eller elit och politiskt motstånd begränsas, utan att staten måste kontrollera hela privatlivet."
+    },
+    {
+      "id": "dr28",
+      "t": "Totalitär regim",
+      "d": "En regim som försöker kontrollera hela samhället, även medier, ideologi och privatliv, och kräver aktiv lojalitet från medborgarna."
+    },
+    {
+      "id": "dr29",
+      "t": "Propaganda",
+      "d": "Budskap som används för att påverka människors åsikter och skapa stöd för exempelvis en regim eller dess ideologi."
     }
   ],
   "questions": [
@@ -342,7 +382,7 @@ const CONTENT={
         "De ersätter behovet av att medborgarna deltar i samhällsdebatten."
       ],
       "answer": 2,
-      "explanation": "I genomgången beskrivs kriterierna som nödvändiga men inte tillräckliga. Att de finns på papperet garanterar inte att demokratin fungerar i praktiken.",
+      "explanation": "De demokratiska kriterierna är nödvändiga men inte tillräckliga. Att de finns på papperet garanterar inte att demokratin fungerar i praktiken.",
       "concepts": [
         "Demokratins regelbok",
         "Demokrati"
@@ -706,7 +746,7 @@ const CONTENT={
       "lesson": 1,
       "section": "Demokratins regelbok",
       "type": "Analys & samband",
-      "question": "Ett land uppfyller formellt demokratins sex kriterier, men många människor vågar ändå inte uttrycka kritik mot makthavarna. Vilken slutsats ligger närmast genomgångens budskap?",
+      "question": "Ett land uppfyller formellt demokratins sex kriterier, men många människor vågar ändå inte uttrycka kritik mot makthavarna. Vilken slutsats är mest rimlig?",
       "options": [
         "Landet är fullt demokratiskt eftersom de sex kriterierna finns i lagstiftningen.",
         "Landet saknar demokrati enbart om det också saknar regelbundna politiska val.",
@@ -714,32 +754,257 @@ const CONTENT={
         "Demokratins regelbok blir överflödig när medborgarna kan välja mellan olika partier."
       ],
       "answer": 2,
-      "explanation": "Genomgången betonar att de sex kriterierna är nödvändiga men inte tillräckliga. Demokratiska friheter behöver också fungera i människors vardag.",
+      "explanation": "De sex kriterierna är nödvändiga men inte tillräckliga. Demokratiska friheter behöver också fungera i människors vardag.",
       "concepts": [
         "Demokrati",
         "Demokratins regelbok",
         "Yttrandefrihet"
       ]
+    },
+    {
+      "id": "dr-q31",
+      "lesson": 2,
+      "section": "Diktatur – former och kontroll",
+      "type": "Fakta & begrepp",
+      "question": "Vad kännetecknar en autokrati?",
+      "options": [
+        "Makten kan bytas genom fria val mellan jämbördiga partier.",
+        "Makten samlas hos en ledare eller liten grupp utan fria maktskiften.",
+        "Makten delas lika mellan oberoende domstolar och medborgare.",
+        "Makten fördelas genom folkomröstningar i varje större fråga."
+      ],
+      "answer": 1,
+      "explanation": "Autokrati handlar om koncentrerad makt och avsaknad av verkliga möjligheter att rösta bort makthavarna.",
+      "concepts": [
+        "Autokrati"
+      ]
+    },
+    {
+      "id": "dr-q32",
+      "lesson": 2,
+      "section": "Diktatur – former och kontroll",
+      "type": "Analys & samband",
+      "question": "Ett land håller val, men verkliga motkandidater stoppas och medierna begränsas. Vilken beskrivning passar bäst?",
+      "options": [
+        "En fungerande demokrati där oppositionen kan konkurrera fritt.",
+        "En militärdiktatur där armén ensam utser landets ledare.",
+        "En hybridregim med val men begränsad politisk konkurrens.",
+        "En direkt demokrati där medborgarna röstar om varje beslut."
+      ],
+      "answer": 2,
+      "explanation": "En hybridregim kan ha val och parlament, samtidigt som konkurrens och friheter begränsas.",
+      "concepts": [
+        "Hybridregim",
+        "Opposition"
+      ]
+    },
+    {
+      "id": "dr-q33",
+      "lesson": 2,
+      "section": "Diktatur – former och kontroll",
+      "type": "Case",
+      "question": "I ett land har arméns högsta befäl avsatt regeringen och tagit kontroll över politiska beslut. Vilken regimtyp beskriver situationen?",
+      "options": [
+        "Militärdiktatur",
+        "Teokrati",
+        "Enpartistat",
+        "Hybridregim"
+      ],
+      "answer": 0,
+      "explanation": "Det avgörande är att militära ledare har tagit kontroll över den politiska makten.",
+      "concepts": [
+        "Militärdiktatur"
+      ]
+    },
+    {
+      "id": "dr-q34",
+      "lesson": 2,
+      "section": "Diktatur – former och kontroll",
+      "type": "Case",
+      "question": "I Iran finns en president och ett parlament, men religiösa ledare har den högsta makten och granskar vilka som får kandidera. Vad illustrerar detta främst?",
+      "options": [
+        "Enpartistat, eftersom bara ett parti får bildas.",
+        "Militärdiktatur, eftersom armén styr alla val.",
+        "Direkt demokrati, eftersom medborgarna beslutar själva.",
+        "Teokrati, eftersom religiöst ledarskap styr politiken."
+      ],
+      "answer": 3,
+      "explanation": "I Iran ligger den högsta politiska makten hos det religiösa ledarskapet.",
+      "concepts": [
+        "Teokrati"
+      ]
+    },
+    {
+      "id": "dr-q35",
+      "lesson": 2,
+      "section": "Diktatur – former och kontroll",
+      "type": "Analys & samband",
+      "question": "Varför räcker det inte att ett land har ett parlament för att landet ska räknas som demokratiskt?",
+      "options": [
+        "Parlament kan finnas även om den verkliga makten ligger hos en liten elit.",
+        "Parlament innebär alltid att militären styr den politiska makten.",
+        "Parlament fungerar bara när alla beslut tas i folkomröstningar.",
+        "Parlament betyder att oppositionen automatiskt har lika stor makt."
+      ],
+      "answer": 0,
+      "explanation": "Även auktoritära system kan ha parlament utan verklig politisk konkurrens.",
+      "concepts": [
+        "Autokrati",
+        "Hybridregim"
+      ]
+    },
+    {
+      "id": "dr-q36",
+      "lesson": 2,
+      "section": "Diktatur – former och kontroll",
+      "type": "Fakta & begrepp",
+      "question": "Vilken skillnad mellan auktoritär och totalitär regim stämmer bäst?",
+      "options": [
+        "Auktoritära regimer förbjuder alltid privat ekonomi, totalitära gör det aldrig.",
+        "Auktoritära regimer har alltid fria val, totalitära saknar alltid parlament.",
+        "Totalitära regimer vill kontrollera hela samhället, auktoritära främst den politiska makten.",
+        "Totalitära regimer saknar propaganda, auktoritära använder alltid propaganda."
+      ],
+      "answer": 2,
+      "explanation": "En totalitär regim försöker kontrollera hela samhället, medan en auktoritär regim främst inriktar sig på politisk kontroll.",
+      "concepts": [
+        "Auktoritär regim",
+        "Totalitär regim"
+      ]
+    },
+    {
+      "id": "dr-q37",
+      "lesson": 2,
+      "section": "Diktatur – former och kontroll",
+      "type": "Case",
+      "question": "I Kina kan medborgarna inte rösta bort kommunistpartiet i fria nationella val. Vilket begrepp beskriver bäst partiets ställning?",
+      "options": [
+        "Teokrati",
+        "Enpartistat",
+        "Militärdiktatur",
+        "Direkt demokrati"
+      ],
+      "answer": 1,
+      "explanation": "I Kina dominerar kommunistpartiet den politiska makten och kan inte röstas bort genom fria nationella val.",
+      "concepts": [
+        "Enpartistat"
+      ]
+    },
+    {
+      "id": "dr-q38",
+      "lesson": 2,
+      "section": "Diktatur – former och kontroll",
+      "type": "Analys & samband",
+      "question": "En regim låter människor driva företag privat men fängslar politiska motståndare och begränsar fria medier. Vilken slutsats passar bäst?",
+      "options": [
+        "Regimen måste vara demokratisk eftersom företag kan drivas privat.",
+        "Regimen måste vara teokratisk eftersom medier begränsas.",
+        "Regimen måste vara totalitär eftersom allt privatliv är förbjudet.",
+        "Regimen kan vara auktoritär utan att kontrollera hela privatlivet."
+      ],
+      "answer": 3,
+      "explanation": "Auktoritär kontroll kan vara hård politiskt samtidigt som vissa privata verksamheter tillåts.",
+      "concepts": [
+        "Auktoritär regim"
+      ]
+    },
+    {
+      "id": "dr-q39",
+      "lesson": 2,
+      "section": "Diktatur – former och kontroll",
+      "type": "Case",
+      "question": "I Ryssland riskerar journalister som granskar makthavare att stoppas, medan statliga tv-kanaler sprider regeringens bild. Vilken kombination beskriver detta bäst?",
+      "options": [
+        "Censur av kritik och propaganda till stöd för regimen.",
+        "Fri opinionsbildning och oberoende mediers granskning.",
+        "Allmän rösträtt och oberoende rättslig prövning.",
+        "Militärt maktövertagande och religiös lagstiftning."
+      ],
+      "answer": 0,
+      "explanation": "Att stoppa kritisk information är censur; att sprida regimens budskap är propaganda.",
+      "concepts": [
+        "Censur",
+        "Propaganda"
+      ]
+    },
+    {
+      "id": "dr-q40",
+      "lesson": 2,
+      "section": "Diktatur – former och kontroll",
+      "type": "Fakta & begrepp",
+      "question": "Vad skiljer främst censur från propaganda?",
+      "options": [
+        "Censur används bara i krig, propaganda bara under fredstid.",
+        "Censur stoppar eller begränsar information, propaganda försöker påverka åsikter.",
+        "Censur handlar om val, propaganda handlar enbart om domstolar.",
+        "Censur sprider alltid statens budskap, propaganda förbjuder alla medier."
+      ],
+      "answer": 1,
+      "explanation": "Censur begränsar informationsspridning, medan propaganda syftar till att påverka människor.",
+      "concepts": [
+        "Censur",
+        "Propaganda"
+      ]
+    },
+    {
+      "id": "dr-q41",
+      "lesson": 2,
+      "section": "Diktatur – former och kontroll",
+      "type": "Case",
+      "question": "En ledare kräver att skolor, medier och offentliga ceremonier ska hylla staten och att medborgare aktivt visar lojalitet. Vilket drag är särskilt typiskt för en totalitär ambition?",
+      "options": [
+        "Att medborgarna får byta ledare genom fria val.",
+        "Att privata åsikter lämnas helt utanför politiken.",
+        "Att staten bara styr utrikespolitiken och militären.",
+        "Att regimen försöker styra både tankar och beteenden."
+      ],
+      "answer": 3,
+      "explanation": "Totalitära regimer försöker påverka hela samhället och förväntar sig aktivt stöd.",
+      "concepts": [
+        "Totalitär regim",
+        "Propaganda"
+      ]
+    },
+    {
+      "id": "dr-q42",
+      "lesson": 2,
+      "section": "Diktatur – former och kontroll",
+      "type": "Analys & samband",
+      "question": "Varför är det viktigt för en autokrati att begränsa oppositionens möjligheter att nå väljare?",
+      "options": [
+        "Det gör att domstolarna automatiskt blir oberoende.",
+        "Det garanterar att fler partier får samma möjligheter.",
+        "Det försvårar organiserat motstånd och minskar risken att makten utmanas.",
+        "Det innebär att alla medborgare får större politiskt inflytande."
+      ],
+      "answer": 2,
+      "explanation": "När oppositionen inte kan organisera sig eller nå ut blir det svårare att utmana makthavarna.",
+      "concepts": [
+        "Autokrati",
+        "Opposition"
+      ]
     }
   ]
 };
 const CARDS=CONTENT.cards, BANK=CONTENT.questions, ROUND_SIZE=20;
+// Befintliga 21 kort tillhör lektion 1; de åtta tillagda korten tillhör lektion 2.
+CARDS.forEach(c=>{c.lesson=Number(c.id.slice(2))<=21?1:2});
+const lessonLabel=lesson=>lesson===2?'Lektion 2 - Diktatur':'Lektion 1 - Demokrati';
 const $=id=>document.getElementById(id);
 $('bankQuestionCount').textContent=BANK.length;
 const shuffled=items=>{const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
-// Varje fråga har ett lektionsnummer. Vid minst fyra lektioner används
-// 8 frågor från de två senaste, 6 från mitten och 6 från början.
-// Om en grupp har för få frågor fylls återstående platser från andra grupper.
+// Urval: 8 från senaste lektionen, 7 från de två föregående och 5 från äldre.
+// Innan minst fyra lektioner finns används tillgängliga grupper, utan dubbletter.
 function pickQuestions(bank,limit=ROUND_SIZE){
  const count=Math.min(limit,bank.length), lessons=[...new Set(bank.map(q=>q.lesson))].sort((a,b)=>a-b);
- if(lessons.length<4)return shuffled(bank).slice(0,count);
- const recent=new Set(lessons.slice(-2));
- const oldestCount=Math.max(1,Math.floor((lessons.length-2)/2));
- const early=new Set(lessons.slice(0,oldestCount));
- const groups=[bank.filter(q=>recent.has(q.lesson)),bank.filter(q=>!recent.has(q.lesson)&&!early.has(q.lesson)),bank.filter(q=>early.has(q.lesson))];
- const targets=[Math.round(count*.4),Math.round(count*.3),count-Math.round(count*.4)-Math.round(count*.3)];
- const selected=[],used=new Set();
- groups.forEach((group,i)=>{for(const q of shuffled(group).slice(0,targets[i])){selected.push(q);used.add(q.id)}});
+ if(!lessons.length)return [];
+ const latest=lessons[lessons.length-1];
+ const prior=new Set(lessons.slice(Math.max(0,lessons.length-3),-1));
+ const older=new Set(lessons.slice(0,Math.max(0,lessons.length-3)));
+ const groups=[bank.filter(q=>q.lesson===latest),bank.filter(q=>prior.has(q.lesson)),bank.filter(q=>older.has(q.lesson))];
+ const targets=[8,7,5], selected=[],used=new Set();
+ groups.forEach((group,i)=>{for(const q of shuffled(group).slice(0,Math.min(targets[i],count-selected.length))){selected.push(q);used.add(q.id)}});
+ // Lediga platser när en kategori ännu saknas fylls av andra befintliga frågor.
  for(const q of shuffled(bank)){if(selected.length>=count)break;if(!used.has(q.id)){selected.push(q);used.add(q.id)}}
  return shuffled(selected);
 }
@@ -750,23 +1015,23 @@ const STORAGE_KEY='kalles-demokrati-begrepp-v1';let stored={};try{stored=JSON.pa
 const boxes={};CARDS.forEach(c=>boxes[c.id]=[1,2,3].includes(stored[c.id])?stored[c.id]:0);
 let deck=CARDS.map(c=>c.id),cardIndex=0,flipped=false,cardFilter='all';
 function saveCards(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(boxes))}catch{}}
-function renderCards(){const counts=[0,0,0,0];CARDS.forEach(c=>counts[boxes[c.id]]++);counts.forEach((n,i)=>$('count'+i).textContent=n);$('cardBar').style.width=100*counts[3]/CARDS.length+'%';$('cardMode').textContent=cardFilter==='all'?'Alla begrepp':'Repetera svåra';if(!deck.length){$('cardCounter').textContent='Inga kort kvar';$('cardFace').textContent='Klart';$('cardContent').textContent='Du har lagt alla kort i ”Kan begreppet”.';$('sortArea').classList.add('hidden');['prevCard','nextCard','flipCard'].forEach(id=>$(id).disabled=true);return}cardIndex=(cardIndex+deck.length)%deck.length;const c=CARDS.find(c=>c.id===deck[cardIndex]);$('cardCounter').textContent=`Kort ${cardIndex+1} av ${deck.length}`;$('cardFace').textContent=flipped?'Definition':'Begrepp';$('cardContent').textContent=flipped?c.d:c.t;$('flash').classList.toggle('flipped',flipped);$('sortArea').classList.toggle('hidden',!flipped);$('flipCard').textContent=flipped?'Visa begrepp':'Visa definition';$('flipCard').disabled=false;$('prevCard').disabled=$('nextCard').disabled=deck.length<2;}
+function renderCards(){const counts=[0,0,0,0];CARDS.forEach(c=>counts[boxes[c.id]]++);counts.forEach((n,i)=>$('count'+i).textContent=n);$('cardBar').style.width=100*counts[3]/CARDS.length+'%';$('cardMode').textContent=cardFilter==='all'?'Alla begrepp':'Repetera svåra';if(!deck.length){$('cardCounter').textContent='Inga kort kvar';$('cardFace').textContent='Klart';$('cardLesson').textContent='';$('cardContent').textContent='Du har lagt alla kort i ”Kan begreppet”.';$('sortArea').classList.add('hidden');['prevCard','nextCard','flipCard'].forEach(id=>$(id).disabled=true);return}cardIndex=(cardIndex+deck.length)%deck.length;const c=CARDS.find(c=>c.id===deck[cardIndex]);$('cardLesson').textContent=lessonLabel(c.lesson);$('cardCounter').textContent=`Kort ${cardIndex+1} av ${deck.length}`;$('cardFace').textContent=flipped?'Definition':'Begrepp';$('cardContent').textContent=flipped?c.d:c.t;$('flash').classList.toggle('flipped',flipped);$('sortArea').classList.toggle('hidden',!flipped);$('flipCard').textContent=flipped?'Visa begrepp':'Visa definition';$('flipCard').disabled=false;$('prevCard').disabled=$('nextCard').disabled=deck.length<2;}
 function flip(){if(deck.length){flipped=!flipped;renderCards()}}
 function moveCard(step){if(deck.length){cardIndex=(cardIndex+step+deck.length)%deck.length;flipped=false;renderCards()}}
 function filterCards(which){cardFilter=which;deck=CARDS.filter(c=>which==='all'||boxes[c.id]!==3).map(c=>c.id);cardIndex=0;flipped=false;$('allCards').classList.toggle('primary',which==='all');$('reviewCards').classList.toggle('primary',which==='review');renderCards()}
 function sortCard(box){if(!deck.length)return;boxes[deck[cardIndex]]=box;saveCards();if(cardFilter==='review'&&box===3){deck.splice(cardIndex,1);if(cardIndex>=deck.length)cardIndex=0}else cardIndex=(cardIndex+1)%deck.length;flipped=false;renderCards()}
 $('flash').onclick=$('flipCard').onclick=flip;$('prevCard').onclick=()=>moveCard(-1);$('nextCard').onclick=()=>moveCard(1);document.querySelectorAll('[data-box]').forEach(b=>b.onclick=()=>sortCard(Number(b.dataset.box)));$('allCards').onclick=()=>filterCards('all');$('reviewCards').onclick=()=>filterCards('review');$('resetCards').onclick=()=>{if(confirm('Vill du nollställa din begreppsträning?')){CARDS.forEach(c=>boxes[c.id]=0);saveCards();filterCards('all')}};
-function renderGlossary(){const term=$('searchCards').value.toLocaleLowerCase('sv').trim();$('glossary').replaceChildren();for(const c of CARDS.filter(c=>(c.t+' '+c.d).toLocaleLowerCase('sv').includes(term))){const details=document.createElement('details'),summary=document.createElement('summary'),p=document.createElement('p');summary.textContent=c.t;p.textContent=c.d;details.append(summary,p);$('glossary').append(details)}}$('searchCards').oninput=renderGlossary;
+function renderGlossary(){const term=$('searchCards').value.toLocaleLowerCase('sv').trim();$('glossary').replaceChildren();for(const c of CARDS.filter(c=>(c.t+' '+c.d).toLocaleLowerCase('sv').includes(term))){const details=document.createElement('details'),summary=document.createElement('summary'),p=document.createElement('p');summary.textContent=c.t;p.textContent=c.d;const tag=document.createElement('span');tag.className='lessonTag';tag.textContent=lessonLabel(c.lesson);details.append(summary,tag,p);$('glossary').append(details)}}$('searchCards').oninput=renderGlossary;
 // Quiz: frågor och svarsalternativ blandas vid varje ny omgång.
 let round=[],at=0,score=0,answered=false,history=[];
 function showQuizScreen(which){for(const [key,id] of Object.entries({play:'quizPlay',results:'quizResults'}))$(id).classList.toggle('hidden',key!==which)}
 function startQuiz(){round=pickQuestions(BANK).map(q=>({...q,choices:shuffled(q.options.map((label,i)=>({label,originalIndex:i})))}));at=0;score=0;history=[];showQuizScreen('play');renderQuestion()}
-function renderQuestion(){answered=false;const q=round[at];$('quizCount').textContent=`Fråga ${at+1} av ${round.length}`;$('quizCorrect').textContent=`${score} rätt hittills`;$('quizBar').style.width=100*at/round.length+'%';$('questionText').textContent=q.question;$('answerList').replaceChildren();$('feedback').classList.add('hidden');$('feedback').classList.remove('bad');$('nextQuestion').classList.add('hidden');q.choices.forEach((choice,i)=>{const btn=document.createElement('button');btn.className='answer';btn.type='button';const letter=document.createElement('span'),label=document.createElement('span');letter.className='letter';letter.textContent='ABCD'[i];label.textContent=choice.label;btn.append(letter,label);btn.onclick=()=>chooseAnswer(i);$('answerList').append(btn)})}
+function renderQuestion(){answered=false;const q=round[at];$('quizCount').textContent=`Fråga ${at+1} av ${round.length}`;$('quizCorrect').textContent=`${score} rätt hittills`;$('quizBar').style.width=100*at/round.length+'%';$('questionLesson').textContent=lessonLabel(q.lesson);$('questionText').textContent=q.question;$('answerList').replaceChildren();$('feedback').classList.add('hidden');$('feedback').classList.remove('bad');$('nextQuestion').classList.add('hidden');q.choices.forEach((choice,i)=>{const btn=document.createElement('button');btn.className='answer';btn.type='button';const letter=document.createElement('span'),label=document.createElement('span');letter.className='letter';letter.textContent='ABCD'[i];label.textContent=choice.label;btn.append(letter,label);btn.onclick=()=>chooseAnswer(i);$('answerList').append(btn)})}
 function chooseAnswer(index){if(answered)return;answered=true;const q=round[at],choice=q.choices[index],correct=choice.originalIndex===q.answer;if(correct)score++;history.push({q,chosen:choice.label,correct});[...$('answerList').children].forEach((btn,i)=>{btn.disabled=true;const isRight=q.choices[i].originalIndex===q.answer;btn.classList.toggle('correct',isRight);btn.classList.toggle('wrong',i===index&&!correct)});$('feedback').classList.remove('hidden');$('feedback').classList.toggle('bad',!correct);$('feedbackTitle').textContent=correct?'Rätt svar!':'Inte riktigt – här är förklaringen';$('feedbackText').textContent=q.explanation;$('quizCorrect').textContent=`${score} rätt hittills`;$('nextQuestion').textContent=at===round.length-1?'Visa resultat →':'Nästa fråga →';$('nextQuestion').classList.remove('hidden');}
 function nextQuestion(){if(!answered)return;if(at<round.length-1){at++;renderQuestion()}else finishQuiz()}
-function finishQuiz(){showQuizScreen('results');$('finalScore').textContent=`${score} / ${round.length}`;$('resultCorrect').textContent=score;$('resultWrong').textContent=round.length-score;$('resultPercent').textContent=Math.round(score/round.length*100)+' %';$('finalMessage').textContent=score===round.length?'Full pott! Du har visat mycket god förståelse.':score>=round.length*.75?'Bra jobbat! Läs gärna igenom de frågor du missade.':'Bra att du tränar! Använd genomgången för att se vilka begrepp du behöver repetera.';$('reviewList').classList.add('hidden');$('showReview').textContent='Visa genomgång';$('reviewList').replaceChildren();history.forEach((h,i)=>{const wrap=document.createElement('div'),title=document.createElement('h4'),chosen=document.createElement('p'),right=document.createElement('p'),expl=document.createElement('p');wrap.className='reviewItem';title.textContent=`${i+1}. ${h.q.question}`;chosen.textContent='Ditt svar: '+h.chosen;chosen.className=h.correct?'goodText':'badText';right.textContent='Rätt svar: '+h.q.options[h.q.answer];right.className='goodText';expl.textContent=h.q.explanation;wrap.append(title,chosen,right,expl);$('reviewList').append(wrap)});$('quizBar').style.width='100%'}
+function finishQuiz(){showQuizScreen('results');$('finalScore').textContent=`${score} / ${round.length}`;$('resultCorrect').textContent=score;$('resultWrong').textContent=round.length-score;$('resultPercent').textContent=Math.round(score/round.length*100)+' %';$('finalMessage').textContent=score===round.length?'Full pott! Du har visat mycket god förståelse.':score>=round.length*.75?'Bra jobbat! Läs gärna igenom de frågor du missade.':'Bra att du tränar! Använd genomgången för att se vilka begrepp du behöver repetera.';$('reviewList').classList.add('hidden');$('showReview').textContent='Visa genomgång';$('reviewList').replaceChildren();history.forEach((h,i)=>{const wrap=document.createElement('div'),title=document.createElement('h4'),chosen=document.createElement('p'),right=document.createElement('p'),expl=document.createElement('p');wrap.className='reviewItem';title.textContent=`${i+1}. ${h.q.question}`;const tag=document.createElement('span');tag.className='lessonTag';tag.textContent=lessonLabel(h.q.lesson);chosen.textContent='Ditt svar: '+h.chosen;chosen.className=h.correct?'goodText':'badText';right.textContent='Rätt svar: '+h.q.options[h.q.answer];right.className='goodText';expl.textContent=h.q.explanation;wrap.append(tag,title,chosen,right,expl);$('reviewList').append(wrap)});$('quizBar').style.width='100%'}
 $('retryQuiz').onclick=startQuiz;$('nextQuestion').onclick=nextQuestion;$('showReview').onclick=()=>{const hidden=$('reviewList').classList.toggle('hidden');$('showReview').textContent=hidden?'Visa genomgång':'Dölj genomgång'};
-function renderTermList(){const target=$('termListEntries');target.replaceChildren();CARDS.forEach((c,i)=>{const entry=document.createElement('article'),heading=document.createElement('h3'),definition=document.createElement('p');entry.className='termEntry';heading.textContent=`${i+1}. ${c.t}`;definition.textContent=c.d;entry.append(heading,definition);target.append(entry)})}
+function renderTermList(){const target=$('termListEntries');target.replaceChildren();CARDS.forEach((c,i)=>{const entry=document.createElement('article'),heading=document.createElement('h3'),definition=document.createElement('p');entry.className='termEntry';heading.textContent=`${i+1}. ${c.t}`;definition.textContent=c.d;const tag=document.createElement('span');tag.className='lessonTag';tag.textContent=lessonLabel(c.lesson);entry.append(tag,heading,definition);target.append(entry)})}
 renderCards();renderGlossary();renderTermList();
 </script>
 </body>
