@@ -18,6 +18,44 @@
 .quizInstructions{color:var(--muted);font-size:14px;line-height:1.65;margin:0 0 23px;max-width:760px}
 .listAction{margin-top:20px;display:flex;justify-content:flex-start}.termListPanel{max-width:900px;margin:auto}.termListActions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}.termListEntries{display:grid;gap:0}.termEntry{padding:14px 0;border-bottom:1px solid var(--line);break-inside:avoid;page-break-inside:avoid}.termEntry h3{font-size:16px;margin:0 0 4px;color:var(--deep)}.termEntry p{margin:0;font-size:14px;line-height:1.55}.termEntry:last-child{border-bottom:0}.lessonTag{display:inline-block;align-self:center;border-radius:99px;background:#edf5ee;color:#426b50;padding:5px 11px;font-size:12px;font-weight:750;letter-spacing:0}.glossary .lessonTag{display:block;width:max-content;margin-top:7px;font-size:11px}.termEntry .lessonTag{margin-bottom:4px}
 @media print{@page{size:A4;margin:16mm 18mm}body{background:#fff!important;color:#222!important}.shell{max-width:none;padding:0!important}.topnav,.hero,.modecards,.exerciseBack,#cardsSection,#quizSection,.termListActions{display:none!important}#termListSection,#termListSection.hidden{display:block!important}.termListPanel{border:0;box-shadow:none;padding:0;max-width:none}.sectionTitle{font-size:24px}.termEntry{padding:9px 0;border-bottom:1px solid #ddd}.termEntry h3{font-size:12px;color:#222}.termEntry p{font-size:11px;line-height:1.4}.termListPanel .sub{font-size:11px;margin-bottom:12px}}
+
+/* Demokratins regelbok: stora tryckvänliga svarsknappar */
+.modecards{grid-template-columns:repeat(3,minmax(0,1fr))}
+.ruleScenario{padding:23px 26px;border-radius:18px;background:linear-gradient(135deg,#eaf4ed,#f8fbf8);border:1px solid #cddfd2;margin:23px 0 18px}
+.ruleMeta{font-size:12px;text-transform:uppercase;letter-spacing:.09em;font-weight:800;color:#387452}
+.ruleScenario p{font-size:clamp(19px,2.4vw,25px);line-height:1.5;font-weight:650;margin:10px 0 2px}
+.ruleHelp{font-size:14px;color:var(--muted);margin:0 0 13px}
+.ruleChoices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.ruleChoice{min-height:100px;border:2px solid #d6e6d9;background:#fff;border-radius:17px;padding:18px 20px;display:flex;gap:15px;align-items:center;text-align:left;color:var(--ink);font-size:clamp(15px,1.7vw,19px);font-weight:750;line-height:1.3;transition:background .14s,border-color .14s,transform .14s}
+.ruleChoice:not(:disabled):hover{background:#f0f8f2;border-color:#91bba0;transform:translateY(-1px)}
+.ruleChoice.selected{background:#e4f2e7;border-color:#3c8a5e;box-shadow:inset 0 0 0 1px #3c8a5e}
+.ruleChoice .ruleNum{flex:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:#e6f1e8;color:#2e704b;font-size:17px}
+.ruleChoice.selected .ruleNum{background:#347b53;color:white}
+.ruleChoice.correct{background:#e3f5e8;border-color:#328658}.ruleChoice.incorrect{background:#fff0ed;border-color:#bc6256}
+.ruleActions{display:flex;gap:12px;justify-content:flex-end;margin-top:19px}.ruleActions .btn{min-width:190px;min-height:49px}
+.ruleFeedback{margin-top:17px;border:1px solid #c5e0cc;border-radius:15px;padding:19px 21px;background:#f0f9f2}
+.ruleFeedback.bad{background:#fff4f1;border-color:#e8c7c0}.ruleFeedback strong{display:block;font-size:17px;margin-bottom:7px}.ruleFeedback p{margin:6px 0;font-size:14px}
+.ruleReviewItem{border-top:1px solid var(--line);padding:15px 0}.ruleReviewItem p{margin:5px 0;font-size:14px}
+@media(max-width:850px){.modecards{grid-template-columns:1fr}.ruleChoices{grid-template-columns:1fr}.ruleChoice{min-height:77px;padding:15px 17px}.ruleActions .btn{width:100%}}
+@media print{#rulesSection{display:none!important}}
+
+/* Kompakt regelbok: större stofftext och alltid åtkomliga navigationsknappar */
+#rulesSection .panel{padding:18px 21px}
+#rulesSection .progress{margin:8px 0 12px}
+#rulesSection .sectionTitle{margin-bottom:4px}
+#rulesSection .sub{margin-bottom:10px}
+#rulesSection .ruleScenario{margin:10px 0 10px;padding:13px 17px}
+#rulesSection .ruleScenario p{font-size:clamp(20px,2.6vw,27px);line-height:1.38;margin:6px 0 0}
+#rulesSection .ruleHelp{margin:0 0 8px;font-size:13px}
+#rulesSection .ruleChoices{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+#rulesSection .ruleChoice{min-height:67px;padding:9px 12px;gap:9px;border-radius:12px;font-size:clamp(13px,1.35vw,16px);line-height:1.23}
+#rulesSection .ruleChoice .ruleNum{width:30px;height:30px;font-size:14px;border-radius:9px}
+#rulesSection .ruleFeedback{margin:9px 0 0;padding:10px 13px;border-radius:11px}
+#rulesSection .ruleFeedback strong{font-size:14px;margin-bottom:3px}
+#rulesSection .ruleFeedback p{font-size:13px;margin:3px 0;line-height:1.4}
+#rulesSection .ruleActions{position:sticky;bottom:8px;z-index:10;margin-top:9px;padding:9px;background:rgba(247,251,247,.97);border:1px solid #dce8dd;border-radius:13px;box-shadow:0 4px 17px #203d2b16}
+#rulesSection .ruleActions .btn{min-height:46px;flex:1}
+@media(max-width:650px){#rulesSection .panel{padding:13px}#rulesSection .ruleChoices{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}#rulesSection .ruleChoice{min-height:64px;padding:9px;gap:7px;font-size:13px}#rulesSection .ruleChoice .ruleNum{width:26px;height:26px;flex-shrink:0}#rulesSection .ruleScenario p{font-size:21px}#rulesSection .ruleActions{bottom:5px}}
 </style>
 </head>
 <body>
@@ -27,19 +65,35 @@
 <div class="modecards" id="homeChoices" role="group" aria-label="Välj övning">
 <button class="mode" id="chooseCards" type="button"><span class="ico" aria-hidden="true">▤</span><strong>Träna begrepp</strong></button>
 <button class="mode" id="chooseQuiz" type="button"><span class="ico" aria-hidden="true">✓</span><strong>Gör Quiz</strong></button>
+<button class="mode" id="chooseRules" type="button"><span class="ico" aria-hidden="true">⚖</span><strong>Demokratins regelbok</strong></button>
 </div>
 <div class="exerciseBack hidden" id="exerciseBack"><button class="btn" id="backToHome" type="button">← Tillbaka till övningarna</button></div>
 <section id="cardsSection" class="hidden">
 <div class="training">
-<section class="panel"><h2 class="sectionTitle">Träna begrepp</h2><p class="sub">Vänd kortet och placera begreppet i rätt träningslåda.</p><div class="minihead"><span id="cardCounter">Kort 1 av 29</span><span id="cardMode">Alla begrepp</span></div><button id="flash" class="flash" type="button" aria-label="Vänd begreppskort"><span class="lessonTag" id="cardLesson">Lektion 1 - Demokrati</span><span class="face" id="cardFace">Begrepp</span><strong id="cardContent"></strong><span class="tip">Klicka för att vända kortet ↻</span></button><div class="row flashActions"><button class="btn" id="prevCard">← Föregående</button><button class="btn primary" id="flipCard">Visa definition</button><button class="btn" id="nextCard">Nästa →</button></div><div class="sort hidden" id="sortArea"><p>Hur väl kan du begreppet?</p><div class="row"><button class="btn" data-box="1">Kan inte begreppet</button><button class="btn" data-box="2">Kan nästan begreppet</button><button class="btn" data-box="3">Kan begreppet</button></div></div></section>
-<aside class="panel"><h2 class="sectionTitle">Din träning</h2><p class="sub">Dina framsteg sparas automatiskt i den här webbläsaren.</p><div class="bar"><i id="cardBar"></i></div><div class="stat">Kan inte begreppet <b id="count1">0</b></div><div class="stat">Kan nästan begreppet <b id="count2">0</b></div><div class="stat">Kan begreppet <b id="count3">0</b></div><div class="stat">Inte tränade <b id="count0">29</b></div><p class="quiet">Repetera alla kort eller bara dem som du ännu inte lagt i ”Kan begreppet”.</p><div class="row"><button class="btn primary" id="allCards">Alla begrepp</button><button class="btn" id="reviewCards">Repetera svåra</button></div><button class="reset" id="resetCards">Nollställ min träning</button></aside>
+<section class="panel"><h2 class="sectionTitle">Träna begrepp</h2><p class="sub">Vänd kortet och placera begreppet i rätt träningslåda.</p><div class="minihead"><span id="cardCounter">Kort 1 av 40</span><span id="cardMode">Alla begrepp</span></div><button id="flash" class="flash" type="button" aria-label="Vänd begreppskort"><span class="face" id="cardFace">Begrepp</span><strong id="cardContent"></strong><span class="tip">Klicka för att vända kortet ↻</span></button><div class="row flashActions"><button class="btn" id="prevCard">← Föregående</button><button class="btn primary" id="flipCard">Visa definition</button><button class="btn" id="nextCard">Nästa →</button></div><div class="sort hidden" id="sortArea"><p>Hur väl kan du begreppet?</p><div class="row"><button class="btn" data-box="1">Kan inte begreppet</button><button class="btn" data-box="2">Kan nästan begreppet</button><button class="btn" data-box="3">Kan begreppet</button></div></div></section>
+<aside class="panel"><h2 class="sectionTitle">Din träning</h2><p class="sub">Dina framsteg sparas automatiskt i den här webbläsaren.</p><div class="bar"><i id="cardBar"></i></div><div class="stat">Kan inte begreppet <b id="count1">0</b></div><div class="stat">Kan nästan begreppet <b id="count2">0</b></div><div class="stat">Kan begreppet <b id="count3">0</b></div><div class="stat">Inte tränade <b id="count0">40</b></div><p class="quiet">Repetera alla kort eller bara dem som du ännu inte lagt i ”Kan begreppet”.</p><div class="row"><button class="btn primary" id="allCards">Alla begrepp</button><button class="btn" id="reviewCards">Repetera svåra</button></div><button class="reset" id="resetCards">Nollställ min träning</button></aside>
 </div>
-<section class="catalog"><div class="cataloghead"><div><h3>Alla 29 begrepp</h3><p class="quiet">Öppna ett begrepp för att läsa definitionen.</p></div><input class="search" id="searchCards" type="search" placeholder="Sök begrepp…" aria-label="Sök begrepp"></div><div id="glossary" class="glossary"></div></section>
+<section class="catalog"><div class="cataloghead"><div><h3>Alla 40 begrepp</h3><p class="quiet">Öppna ett begrepp för att läsa definitionen.</p></div><input class="search" id="searchCards" type="search" placeholder="Sök begrepp…" aria-label="Sök begrepp"></div><div id="glossary" class="glossary"></div></section>
 <div class="listAction"><button class="btn primary" id="openTermList" type="button">Skapa begreppslista →</button></div>
 </section>
 <section id="quizSection" class="hidden">
-<div class="panel hidden" id="quizPlay"><div class="progressRow"><span id="quizCount">Fråga 1 av 20</span><span id="quizCorrect">0 rätt hittills</span></div><div class="progress"><i id="quizBar"></i></div><p class="quizInstructions">Du får 20 frågor slumpade ur frågebanken som består av <strong id="bankQuestionCount"></strong> frågor. Varje fråga har fyra alternativ och ett rätt svar. Efter ditt val får du direkt en förklaring. Frågebanken fylls på under momentet.</p><div class="lessonTag" id="questionLesson"></div><h2 class="question" id="questionText"></h2><div class="answers" id="answerList"></div><div class="feedback hidden" id="feedback" role="status" aria-live="polite"><strong id="feedbackTitle"></strong><p id="feedbackText"></p></div><div class="quizNav"><span class="quiet">Välj det alternativ du tycker är bäst.</span><button class="btn primary hidden" id="nextQuestion">Nästa fråga →</button></div></div>
+<div class="panel hidden" id="quizPlay"><div class="progressRow"><span id="quizCount">Fråga 1 av 20</span><span id="quizCorrect">0 rätt hittills</span></div><div class="progress"><i id="quizBar"></i></div><p class="quizInstructions">Du får 20 frågor slumpade ur frågebanken som består av <strong id="bankQuestionCount"></strong> frågor. Varje fråga har fyra alternativ och ett rätt svar. Efter ditt val får du direkt en förklaring. Frågebanken fylls på under momentet.</p><h2 class="question" id="questionText"></h2><div class="answers" id="answerList"></div><div class="feedback hidden" id="feedback" role="status" aria-live="polite"><strong id="feedbackTitle"></strong><p id="feedbackText"></p></div><div class="quizNav"><span class="quiet">Välj det alternativ du tycker är bäst.</span><button class="btn primary hidden" id="nextQuestion">Nästa fråga →</button></div></div>
 <div class="panel hidden" id="quizResults"><span class="eyebrow">Quiz avslutat</span><h2 class="sectionTitle">Ditt resultat</h2><div class="score" id="finalScore">0 / 20</div><p id="finalMessage" class="sub"></p><div class="resultGrid"><div><strong id="resultCorrect">0</strong><span>Rätt svar</span></div><div><strong id="resultWrong">0</strong><span>Fel svar</span></div><div><strong id="resultPercent">0 %</strong><span>Andel rätt</span></div></div><div class="row"><button class="btn primary" id="retryQuiz">Gör ett nytt quiz</button><button class="btn" id="showReview">Visa genomgång</button></div><div class="hidden" id="reviewList" style="margin-top:25px"></div></div>
+</section>
+
+<section id="rulesSection" class="hidden">
+<div class="panel" id="rulesPlay">
+<div class="progressRow"><span id="rulesCount">Exempel 1 av 12</span><span id="rulesScore">0 rätt hittills</span></div>
+<div class="progress"><i id="rulesBar"></i></div>
+<h2 class="sectionTitle">Demokratins regelbok</h2>
+<p class="sub">Läs exemplet och välj det kriterium som passar bäst. Varje exempel har ett rätt kriterium. Du får 12 slumpade exempel av 50.</p>
+<div class="ruleScenario"><span class="ruleMeta" id="rulesMeta"></span><p id="rulesPrompt"></p></div>
+<p class="ruleHelp" id="rulesHelp">Välj ett kriterium och tryck på Kontrollera svar.</p>
+<div class="ruleChoices" id="rulesChoices"></div>
+<div class="ruleFeedback hidden" id="rulesFeedback" role="status" aria-live="polite"></div>
+<div class="ruleActions"><button class="btn primary" id="rulesCheck" type="button" disabled>Kontrollera svar</button><button class="btn primary hidden" id="rulesNext" type="button">Nästa exempel →</button></div>
+</div>
+<div class="panel hidden" id="rulesResults"><span class="eyebrow">Övningen avslutad</span><h2 class="sectionTitle">Ditt resultat</h2><div class="score" id="rulesFinal">0 / 12</div><p class="sub" id="rulesMessage"></p><div class="row"><button class="btn primary" id="rulesRetry">Träna 12 nya exempel</button><button class="btn" id="rulesReviewBtn">Visa genomgång</button></div><div class="hidden" id="rulesReview"></div></div>
 </section>
 
 <section id="termListSection" class="hidden">
@@ -199,6 +253,61 @@ const CONTENT={
       "id": "dr29",
       "t": "Propaganda",
       "d": "Budskap som används för att påverka människors åsikter och skapa stöd för exempelvis en regim eller dess ideologi."
+    },
+    {
+      "id": "dr30",
+      "t": "Mänskliga rättigheter",
+      "d": "Grundläggande rättigheter som gäller alla människor och skyddar deras frihet, värdighet och säkerhet."
+    },
+    {
+      "id": "dr31",
+      "t": "Rätt till liv och personlig säkerhet",
+      "d": "En mänsklig rättighet som skyddar människors liv, frihet och personliga säkerhet."
+    },
+    {
+      "id": "dr32",
+      "t": "Tortyrförbud",
+      "d": "En mänsklig rättighet och del av rättssäkerheten som förbjuder tortyr och omänsklig behandling."
+    },
+    {
+      "id": "dr33",
+      "t": "Godtyckligt frihetsberövande",
+      "d": "Att gripas eller fängslas utan lagliga skäl. Skyddet mot detta är en mänsklig rättighet och del av rättssäkerheten."
+    },
+    {
+      "id": "dr34",
+      "t": "Religionsfrihet",
+      "d": "En mänsklig rättighet att ha, byta och utöva en religion eller övertygelse."
+    },
+    {
+      "id": "dr35",
+      "t": "Rörelsefrihet",
+      "d": "En mänsklig rättighet att röra sig inom sitt land, lämna länder och återvända till sitt eget."
+    },
+    {
+      "id": "dr36",
+      "t": "Avdemokratisering",
+      "d": "När ett land blir mindre demokratiskt genom att exempelvis fria val, friheter och rättssäkerhet försvagas."
+    },
+    {
+      "id": "dr37",
+      "t": "Oberoende domstolar",
+      "d": "Domstolar som dömer utan politisk påverkan. Viktigt för rättssäkerheten och mänskliga rättigheter."
+    },
+    {
+      "id": "dr38",
+      "t": "Polarisering",
+      "d": "När motsättningarna mellan olika grupper i samhället blir allt starkare."
+    },
+    {
+      "id": "dr39",
+      "t": "Civilsamhälle",
+      "d": "Föreningar och organisationer utanför staten och näringslivet, viktiga för demokratin och mänskliga rättigheter."
+    },
+    {
+      "id": "dr41",
+      "t": "Rätt till försvarare",
+      "d": "Rätten till juridisk hjälp vid brottsanklagelser. En mänsklig rättighet och del av rättssäkerheten."
     }
   ],
   "questions": [
@@ -983,13 +1092,348 @@ const CONTENT={
         "Autokrati",
         "Opposition"
       ]
+    },
+    {
+      "id": "dr-q43",
+      "lesson": 3,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I Ungern har vallagar och fördelningen av kampanjresurser gynnat det tidigare regeringspartiet. Vad visar detta?",
+      "options": [
+        "Att regelbundna val alltid innebär att ett land är fullt demokratiskt.",
+        "Att val kan hållas samtidigt som konkurrensen mellan partierna är orättvis.",
+        "Att valhemligheten automatiskt upphör när vallagar ändras.",
+        "Att oppositionen måste förbjudas för att ett val ska vara orättvist."
+      ],
+      "answer": 1,
+      "explanation": "Demokratiska val kräver också rättvisa villkor för partierna.",
+      "concepts": [
+        "Regelbundna politiska val och fri partibildning"
+      ]
+    },
+    {
+      "id": "dr-q44",
+      "lesson": 3,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "Ryssland håller presidentval, men verkliga politiska utmanare har hindrats från att delta. Vilken del av demokratins regelbok brister tydligast?",
+      "options": [
+        "Valhemligheten.",
+        "Majoritetsprincipen.",
+        "Fri partibildning och verklig politisk konkurrens.",
+        "Allmän rösträtt."
+      ],
+      "answer": 2,
+      "explanation": "Val är inte fullt demokratiska om oppositionen inte får konkurrera på rimliga villkor.",
+      "concepts": [
+        "Opposition",
+        "Regelbundna politiska val och fri partibildning"
+      ]
+    },
+    {
+      "id": "dr-q45",
+      "lesson": 3,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I Turkiet har journalister riskerat straff för att kritisera regeringen, och kritiska medier har begränsats. Vilken demokratisk princip hotas främst?",
+      "options": [
+        "Pressfrihet och fri opinionsbildning.",
+        "Allmän och lika rösträtt.",
+        "Valhemlighet.",
+        "Majoritetsprincipen."
+      ],
+      "answer": 0,
+      "explanation": "Fria medier behövs för att medborgarna ska kunna granska makten och bilda egna åsikter.",
+      "concepts": [
+        "Pressfrihet",
+        "Fri opinionsbildning"
+      ]
+    },
+    {
+      "id": "dr-q46",
+      "lesson": 3,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I Sverige kan människor demonstrera och organisera sig även när de kritiserar regeringen. Vad är detta framför allt ett exempel på?",
+      "options": [
+        "Att staten bestämmer vilka åsikter som är tillåtna.",
+        "Att alla politiska beslut måste fattas genom folkomröstningar.",
+        "Att domstolarna styr opinionsbildningen.",
+        "Att organisationsfrihet och demonstrationsfrihet fungerar."
+      ],
+      "answer": 3,
+      "explanation": "Möjligheten att organisera sig och protestera är viktig i en demokrati.",
+      "concepts": [
+        "Organisationsfrihet",
+        "Demonstrationsfrihet"
+      ]
+    },
+    {
+      "id": "dr-q47",
+      "lesson": 3,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I USA skiljer sig regler för väljarregistrering och röstning mellan delstater. Vilken demokratisk fråga är särskilt viktig att undersöka?",
+      "options": [
+        "Om medierna måste stödja samma kandidat.",
+        "Om alla röstberättigade har rimliga möjligheter att delta i val.",
+        "Om presidenten får utse alla kandidater.",
+        "Om domstolarna ska räkna varje röst."
+      ],
+      "answer": 1,
+      "explanation": "Demokratin kräver inte bara rösträtt på papperet utan också fungerande möjligheter att använda den.",
+      "concepts": [
+        "Allmän och lika rösträtt"
+      ]
+    },
+    {
+      "id": "dr-q48",
+      "lesson": 3,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I Ungern har förändringar i medieägandet lett till att många medier kontrollerats av regeringsvänliga aktörer. Vilken risk innebär detta?",
+      "options": [
+        "Att färre självständiga perspektiv når väljarna.",
+        "Att alla politiska partier automatiskt förbjuds.",
+        "Att rätten att rösta försvinner för alla medborgare.",
+        "Att parlamentet inte längre kan fatta beslut."
+      ],
+      "answer": 0,
+      "explanation": "Om många medier står nära makten blir det svårare att få oberoende information.",
+      "concepts": [
+        "Pressfrihet",
+        "Pluralism"
+      ]
+    },
+    {
+      "id": "dr-q49",
+      "lesson": 3,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I Ryssland används statliga medier och skolundervisning för att stärka stödet för landets ledning, samtidigt som kritik begränsas. Vilken slutsats är mest rimlig?",
+      "options": [
+        "Fri opinionsbildning stärks när staten sprider ett gemensamt budskap.",
+        "Valhemligheten är den enda demokratiska princip som påverkas.",
+        "Staten påverkar åsiktsbildningen samtidigt som alternativa perspektiv begränsas.",
+        "Oberoende medier får större möjligheter att granska regeringen."
+      ],
+      "answer": 2,
+      "explanation": "Propaganda och begränsningar av kritik kan försvaga den fria opinionsbildningen.",
+      "concepts": [
+        "Propaganda",
+        "Fri opinionsbildning"
+      ]
+    },
+    {
+      "id": "dr-q50",
+      "lesson": 4,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I Iran har säkerhetsstyrkor använt dödligt våld mot demonstranter. Vilken mänsklig rättighet hotas mest direkt?",
+      "options": [
+        "Religionsfriheten.",
+        "Rörelsefriheten.",
+        "Rätten till privatliv.",
+        "Rätten till liv och personlig säkerhet."
+      ],
+      "answer": 3,
+      "explanation": "Staten ska respektera och skydda människors liv och personliga säkerhet.",
+      "concepts": [
+        "Rätt till liv och personlig säkerhet"
+      ]
+    },
+    {
+      "id": "dr-q51",
+      "lesson": 4,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I Ryssland har människor gripits när de samlats för att hedra oppositionspolitikern Aleksej Navalnyj. Vilken mänsklig rättighet berörs särskilt?",
+      "options": [
+        "Rätten till utbildning.",
+        "Mötes- och demonstrationsfriheten.",
+        "Rätten till egendom.",
+        "Rätten till medborgarskap."
+      ],
+      "answer": 1,
+      "explanation": "Fredliga sammankomster skyddas av mänskliga rättigheter.",
+      "concepts": [
+        "Demonstrationsfrihet"
+      ]
+    },
+    {
+      "id": "dr-q52",
+      "lesson": 4,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I Iran har människor pressats att erkänna brott inför tv-kameror. Varför är framtvingade erkännanden ett allvarligt människorättsproblem?",
+      "options": [
+        "De kan innebära omänsklig behandling och undergräva rätten till en rättvis rättegång.",
+        "De innebär att den misstänkte automatiskt får en offentlig försvarare.",
+        "De visar att domstolen redan har prövat alla bevis.",
+        "De gör att staten inte längre får genomföra brottsutredningar."
+      ],
+      "answer": 0,
+      "explanation": "Ingen ska tvingas erkänna brott genom övergrepp eller otillbörliga påtryckningar.",
+      "concepts": [
+        "Tortyrförbud",
+        "Oskuldspresumtionen"
+      ]
+    },
+    {
+      "id": "dr-q53",
+      "lesson": 4,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I Ryssland riskerar hbtq-personer ingripanden på grund av symboler och uttryck kopplade till deras identitet. Vilket människorättsproblem illustrerar detta tydligast?",
+      "options": [
+        "Att alla medborgare måste ha samma politiska åsikt.",
+        "Att valhemligheten har upphört.",
+        "Att människor kan diskrimineras på grund av sin identitet.",
+        "Att religionsfriheten innebär att staten bestämmer människors livsåskådning."
+      ],
+      "answer": 2,
+      "explanation": "Mänskliga rättigheter gäller alla, och människor ska skyddas mot diskriminering.",
+      "concepts": [
+        "Mänskliga rättigheter"
+      ]
+    },
+    {
+      "id": "dr-q54",
+      "lesson": 4,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I Iran har myndigheter begränsat tillgången till internet under protester. Varför kan detta innebära ett människorättsproblem?",
+      "options": [
+        "Det innebär att alla val automatiskt blir ogiltiga.",
+        "Det kan hindra människor från att kommunicera, ta emot information och uttrycka sina åsikter.",
+        "Det innebär att människor förlorar sitt medborgarskap.",
+        "Det innebär att domstolarna måste upphöra med sin verksamhet."
+      ],
+      "answer": 1,
+      "explanation": "Internetnedstängningar kan inskränka yttrandefriheten och tillgången till information.",
+      "concepts": [
+        "Yttrandefrihet"
+      ]
+    },
+    {
+      "id": "dr-q55",
+      "lesson": 4,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I Turkiet har kurder utsatts för diskriminering och förföljelse. Vilken grundläggande princip om mänskliga rättigheter berörs?",
+      "options": [
+        "Att rättigheter endast gäller landets största folkgrupp.",
+        "Att regeringen får välja vilka grupper som har mänskliga rättigheter.",
+        "Att minoriteter saknar rätt till skydd mot diskriminering.",
+        "Att mänskliga rättigheter gäller alla, oavsett etnisk tillhörighet."
+      ],
+      "answer": 3,
+      "explanation": "Mänskliga rättigheter är universella och gäller även minoriteter.",
+      "concepts": [
+        "Mänskliga rättigheter",
+        "Minoritetsrättigheter"
+      ]
+    },
+    {
+      "id": "dr-q56",
+      "lesson": 4,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I Iran har dödsstraff använts mot personer som anklagats för politiskt motiverade brott. Varför väcker detta särskild oro för mänskliga rättigheter?",
+      "options": [
+        "Det kan innebära att staten använder rättssystemet för att tysta oliktänkande och hota rätten till liv.",
+        "Det innebär att alla politiska brott måste leda till fängelse i stället.",
+        "Det visar att varje dödsdom automatiskt är ett brott mot religionsfriheten.",
+        "Det visar att alla åtalade har fått en oberoende rättslig prövning."
+      ],
+      "answer": 0,
+      "explanation": "När dödsstraff används för politiskt förtryck hotas både rätten till liv och rättssäkerheten.",
+      "concepts": [
+        "Rätt till liv och personlig säkerhet",
+        "Rättssäkerhet"
+      ]
+    },
+    {
+      "id": "dr-q57",
+      "lesson": 4,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I Turkiet har journalister och oppositionella frihetsberövats under lång tid utan rättegång. Vad är det tydligaste problemet ur ett rättssäkerhetsperspektiv?",
+      "options": [
+        "Att alla misstänkta måste friges omedelbart.",
+        "Att domstolar alltid måste godkänna regeringens beslut.",
+        "Att människor kan frihetsberövas utan en rättvis rättslig prövning.",
+        "Att staten inte får utreda misstänkta brott."
+      ],
+      "answer": 2,
+      "explanation": "Skydd mot godtyckliga frihetsberövanden och rätten till rättslig prövning är grundläggande för rättssäkerheten.",
+      "concepts": [
+        "Godtyckligt frihetsberövande",
+        "Rättssäkerhet"
+      ]
+    },
+    {
+      "id": "dr-q58",
+      "lesson": 4,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I Ungern har lagändringar påverkat domstolarnas oberoende. Varför är detta ett problem?",
+      "options": [
+        "Domstolarna ska alltid följa regeringens politiska mål.",
+        "Politiskt inflytande över domstolar kan göra det svårare att få en opartisk prövning.",
+        "Domstolarna ska själva bestämma vilka partier som får ställa upp i val.",
+        "Oberoende domstolar innebär att domare inte behöver följa lagen."
+      ],
+      "answer": 1,
+      "explanation": "Rättssäkerhet kräver att domstolar kan döma utan otillbörlig politisk påverkan.",
+      "concepts": [
+        "Oberoende domstolar",
+        "Rättssäkerhet"
+      ]
+    },
+    {
+      "id": "dr-q59",
+      "lesson": 4,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I USA kan offentliga försvarare ha hög arbetsbelastning, medan välbärgade personer kan anlita privata advokater. Vilket rättssäkerhetsproblem kan detta skapa?",
+      "options": [
+        "Att en person med privat advokat automatiskt blir frikänd.",
+        "Att offentliga försvarare inte behöver följa lagen.",
+        "Att rätten till försvarare endast gäller personer med hög inkomst.",
+        "Att ekonomiska förutsättningar kan påverka möjligheterna att försvara sig."
+      ],
+      "answer": 3,
+      "explanation": "Rätten till försvarare är viktig, men stora resursskillnader kan påverka möjligheten till ett effektivt försvar.",
+      "concepts": [
+        "Rätt till försvarare",
+        "Rättssäkerhet"
+      ]
+    },
+    {
+      "id": "dr-q60",
+      "lesson": 4,
+      "section": "Demokrati och mänskliga rättigheter i praktiken",
+      "type": "Analys & samband",
+      "question": "I Iran anklagas en person för brott och pressas att erkänna innan en oberoende domstol har prövat anklagelserna. Vilken rättssäkerhetsprincip riskerar att åsidosättas?",
+      "options": [
+        "Oskuldspresumtionen – personen ska betraktas som oskyldig tills skuld har bevisats.",
+        "Majoritetsprincipen – flest röster ska avgöra om personen är skyldig.",
+        "Valhemligheten – ingen ska kunna se hur personen röstat.",
+        "Fri partibildning – personen ska kunna starta ett politiskt parti."
+      ],
+      "answer": 0,
+      "explanation": "En brottsanklagelse eller ett framtvingat erkännande ersätter inte en rättvis prövning av skuld.",
+      "concepts": [
+        "Oskuldspresumtionen",
+        "Rättssäkerhet"
+      ]
     }
   ]
 };
 const CARDS=CONTENT.cards, BANK=CONTENT.questions, ROUND_SIZE=20;
-// Befintliga 21 kort tillhör lektion 1; de åtta tillagda korten tillhör lektion 2.
-CARDS.forEach(c=>{c.lesson=Number(c.id.slice(2))<=21?1:2});
-const lessonLabel=lesson=>lesson===2?'Lektion 2 - Diktatur':'Lektion 1 - Demokrati';
+// Interna grupper används enbart för att bevara den befintliga fördelningen av quizfrågor.
+CARDS.forEach(c=>{const n=Number(c.id.slice(2));c.lesson=n<=21?1:n<=29?2:4;});
 const $=id=>document.getElementById(id);
 $('bankQuestionCount').textContent=BANK.length;
 const shuffled=items=>{const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
@@ -1008,30 +1452,494 @@ function pickQuestions(bank,limit=ROUND_SIZE){
  for(const q of shuffled(bank)){if(selected.length>=count)break;if(!used.has(q.id)){selected.push(q);used.add(q.id)}}
  return shuffled(selected);
 }
-function setMode(mode){const home=mode==='home',cards=mode==='cards';$('homeHero').classList.toggle('hidden',!home);$('homeChoices').classList.toggle('hidden',!home);$('exerciseBack').classList.toggle('hidden',home);$('cardsSection').classList.toggle('hidden',!cards);$('termListSection').classList.toggle('hidden',mode!=='list');$('quizSection').classList.toggle('hidden',mode!=='quiz');window.scrollTo(0,0);}
-$('chooseCards').onclick=()=>setMode('cards');$('chooseQuiz').onclick=()=>{setMode('quiz');startQuiz()};$('backToHome').onclick=()=>setMode('home');$('openTermList').onclick=()=>setMode('list');$('backToCards').onclick=()=>setMode('cards');$('downloadTermPdf').onclick=()=>window.print();
+function setMode(mode){const home=mode==='home',cards=mode==='cards';$('homeHero').classList.toggle('hidden',!home);$('homeChoices').classList.toggle('hidden',!home);$('exerciseBack').classList.toggle('hidden',home);$('cardsSection').classList.toggle('hidden',!cards);$('termListSection').classList.toggle('hidden',mode!=='list');$('quizSection').classList.toggle('hidden',mode!=='quiz');$('rulesSection').classList.toggle('hidden',mode!=='rules');window.scrollTo(0,0);}
+$('chooseRules').onclick=()=>{setMode('rules');startRules()};$('chooseCards').onclick=()=>setMode('cards');$('chooseQuiz').onclick=()=>{setMode('quiz');startQuiz()};$('backToHome').onclick=()=>setMode('home');$('openTermList').onclick=()=>setMode('list');$('backToCards').onclick=()=>setMode('cards');$('downloadTermPdf').onclick=()=>window.print();
 // Begreppskort. Befintlig lagringsnyckel bevaras så tidigare träning finns kvar.
 const STORAGE_KEY='kalles-demokrati-begrepp-v1';let stored={};try{stored=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}')||{}}catch{}
 const boxes={};CARDS.forEach(c=>boxes[c.id]=[1,2,3].includes(stored[c.id])?stored[c.id]:0);
 let deck=CARDS.map(c=>c.id),cardIndex=0,flipped=false,cardFilter='all';
 function saveCards(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(boxes))}catch{}}
-function renderCards(){const counts=[0,0,0,0];CARDS.forEach(c=>counts[boxes[c.id]]++);counts.forEach((n,i)=>$('count'+i).textContent=n);$('cardBar').style.width=100*counts[3]/CARDS.length+'%';$('cardMode').textContent=cardFilter==='all'?'Alla begrepp':'Repetera svåra';if(!deck.length){$('cardCounter').textContent='Inga kort kvar';$('cardFace').textContent='Klart';$('cardLesson').textContent='';$('cardContent').textContent='Du har lagt alla kort i ”Kan begreppet”.';$('sortArea').classList.add('hidden');['prevCard','nextCard','flipCard'].forEach(id=>$(id).disabled=true);return}cardIndex=(cardIndex+deck.length)%deck.length;const c=CARDS.find(c=>c.id===deck[cardIndex]);$('cardLesson').textContent=lessonLabel(c.lesson);$('cardCounter').textContent=`Kort ${cardIndex+1} av ${deck.length}`;$('cardFace').textContent=flipped?'Definition':'Begrepp';$('cardContent').textContent=flipped?c.d:c.t;$('flash').classList.toggle('flipped',flipped);$('sortArea').classList.toggle('hidden',!flipped);$('flipCard').textContent=flipped?'Visa begrepp':'Visa definition';$('flipCard').disabled=false;$('prevCard').disabled=$('nextCard').disabled=deck.length<2;}
+function renderCards(){const counts=[0,0,0,0];CARDS.forEach(c=>counts[boxes[c.id]]++);counts.forEach((n,i)=>$('count'+i).textContent=n);$('cardBar').style.width=100*counts[3]/CARDS.length+'%';$('cardMode').textContent=cardFilter==='all'?'Alla begrepp':'Repetera svåra';if(!deck.length){$('cardCounter').textContent='Inga kort kvar';$('cardFace').textContent='Klart';$('cardContent').textContent='Du har lagt alla kort i ”Kan begreppet”.';$('sortArea').classList.add('hidden');['prevCard','nextCard','flipCard'].forEach(id=>$(id).disabled=true);return}cardIndex=(cardIndex+deck.length)%deck.length;const c=CARDS.find(c=>c.id===deck[cardIndex]);$('cardCounter').textContent=`Kort ${cardIndex+1} av ${deck.length}`;$('cardFace').textContent=flipped?'Definition':'Begrepp';$('cardContent').textContent=flipped?c.d:c.t;$('flash').classList.toggle('flipped',flipped);$('sortArea').classList.toggle('hidden',!flipped);$('flipCard').textContent=flipped?'Visa begrepp':'Visa definition';$('flipCard').disabled=false;$('prevCard').disabled=$('nextCard').disabled=deck.length<2;}
 function flip(){if(deck.length){flipped=!flipped;renderCards()}}
 function moveCard(step){if(deck.length){cardIndex=(cardIndex+step+deck.length)%deck.length;flipped=false;renderCards()}}
 function filterCards(which){cardFilter=which;deck=CARDS.filter(c=>which==='all'||boxes[c.id]!==3).map(c=>c.id);cardIndex=0;flipped=false;$('allCards').classList.toggle('primary',which==='all');$('reviewCards').classList.toggle('primary',which==='review');renderCards()}
 function sortCard(box){if(!deck.length)return;boxes[deck[cardIndex]]=box;saveCards();if(cardFilter==='review'&&box===3){deck.splice(cardIndex,1);if(cardIndex>=deck.length)cardIndex=0}else cardIndex=(cardIndex+1)%deck.length;flipped=false;renderCards()}
 $('flash').onclick=$('flipCard').onclick=flip;$('prevCard').onclick=()=>moveCard(-1);$('nextCard').onclick=()=>moveCard(1);document.querySelectorAll('[data-box]').forEach(b=>b.onclick=()=>sortCard(Number(b.dataset.box)));$('allCards').onclick=()=>filterCards('all');$('reviewCards').onclick=()=>filterCards('review');$('resetCards').onclick=()=>{if(confirm('Vill du nollställa din begreppsträning?')){CARDS.forEach(c=>boxes[c.id]=0);saveCards();filterCards('all')}};
-function renderGlossary(){const term=$('searchCards').value.toLocaleLowerCase('sv').trim();$('glossary').replaceChildren();for(const c of CARDS.filter(c=>(c.t+' '+c.d).toLocaleLowerCase('sv').includes(term))){const details=document.createElement('details'),summary=document.createElement('summary'),p=document.createElement('p');summary.textContent=c.t;p.textContent=c.d;const tag=document.createElement('span');tag.className='lessonTag';tag.textContent=lessonLabel(c.lesson);details.append(summary,tag,p);$('glossary').append(details)}}$('searchCards').oninput=renderGlossary;
+function renderGlossary(){const term=$('searchCards').value.toLocaleLowerCase('sv').trim();$('glossary').replaceChildren();for(const c of CARDS.filter(c=>(c.t+' '+c.d).toLocaleLowerCase('sv').includes(term))){const details=document.createElement('details'),summary=document.createElement('summary'),p=document.createElement('p');summary.textContent=c.t;p.textContent=c.d;details.append(summary,p);$('glossary').append(details)}}$('searchCards').oninput=renderGlossary;
 // Quiz: frågor och svarsalternativ blandas vid varje ny omgång.
 let round=[],at=0,score=0,answered=false,history=[];
 function showQuizScreen(which){for(const [key,id] of Object.entries({play:'quizPlay',results:'quizResults'}))$(id).classList.toggle('hidden',key!==which)}
 function startQuiz(){round=pickQuestions(BANK).map(q=>({...q,choices:shuffled(q.options.map((label,i)=>({label,originalIndex:i})))}));at=0;score=0;history=[];showQuizScreen('play');renderQuestion()}
-function renderQuestion(){answered=false;const q=round[at];$('quizCount').textContent=`Fråga ${at+1} av ${round.length}`;$('quizCorrect').textContent=`${score} rätt hittills`;$('quizBar').style.width=100*at/round.length+'%';$('questionLesson').textContent=lessonLabel(q.lesson);$('questionText').textContent=q.question;$('answerList').replaceChildren();$('feedback').classList.add('hidden');$('feedback').classList.remove('bad');$('nextQuestion').classList.add('hidden');q.choices.forEach((choice,i)=>{const btn=document.createElement('button');btn.className='answer';btn.type='button';const letter=document.createElement('span'),label=document.createElement('span');letter.className='letter';letter.textContent='ABCD'[i];label.textContent=choice.label;btn.append(letter,label);btn.onclick=()=>chooseAnswer(i);$('answerList').append(btn)})}
+function renderQuestion(){answered=false;const q=round[at];$('quizCount').textContent=`Fråga ${at+1} av ${round.length}`;$('quizCorrect').textContent=`${score} rätt hittills`;$('quizBar').style.width=100*at/round.length+'%';$('questionText').textContent=q.question;$('answerList').replaceChildren();$('feedback').classList.add('hidden');$('feedback').classList.remove('bad');$('nextQuestion').classList.add('hidden');q.choices.forEach((choice,i)=>{const btn=document.createElement('button');btn.className='answer';btn.type='button';const letter=document.createElement('span'),label=document.createElement('span');letter.className='letter';letter.textContent='ABCD'[i];label.textContent=choice.label;btn.append(letter,label);btn.onclick=()=>chooseAnswer(i);$('answerList').append(btn)})}
 function chooseAnswer(index){if(answered)return;answered=true;const q=round[at],choice=q.choices[index],correct=choice.originalIndex===q.answer;if(correct)score++;history.push({q,chosen:choice.label,correct});[...$('answerList').children].forEach((btn,i)=>{btn.disabled=true;const isRight=q.choices[i].originalIndex===q.answer;btn.classList.toggle('correct',isRight);btn.classList.toggle('wrong',i===index&&!correct)});$('feedback').classList.remove('hidden');$('feedback').classList.toggle('bad',!correct);$('feedbackTitle').textContent=correct?'Rätt svar!':'Inte riktigt – här är förklaringen';$('feedbackText').textContent=q.explanation;$('quizCorrect').textContent=`${score} rätt hittills`;$('nextQuestion').textContent=at===round.length-1?'Visa resultat →':'Nästa fråga →';$('nextQuestion').classList.remove('hidden');}
 function nextQuestion(){if(!answered)return;if(at<round.length-1){at++;renderQuestion()}else finishQuiz()}
-function finishQuiz(){showQuizScreen('results');$('finalScore').textContent=`${score} / ${round.length}`;$('resultCorrect').textContent=score;$('resultWrong').textContent=round.length-score;$('resultPercent').textContent=Math.round(score/round.length*100)+' %';$('finalMessage').textContent=score===round.length?'Full pott! Du har visat mycket god förståelse.':score>=round.length*.75?'Bra jobbat! Läs gärna igenom de frågor du missade.':'Bra att du tränar! Använd genomgången för att se vilka begrepp du behöver repetera.';$('reviewList').classList.add('hidden');$('showReview').textContent='Visa genomgång';$('reviewList').replaceChildren();history.forEach((h,i)=>{const wrap=document.createElement('div'),title=document.createElement('h4'),chosen=document.createElement('p'),right=document.createElement('p'),expl=document.createElement('p');wrap.className='reviewItem';title.textContent=`${i+1}. ${h.q.question}`;const tag=document.createElement('span');tag.className='lessonTag';tag.textContent=lessonLabel(h.q.lesson);chosen.textContent='Ditt svar: '+h.chosen;chosen.className=h.correct?'goodText':'badText';right.textContent='Rätt svar: '+h.q.options[h.q.answer];right.className='goodText';expl.textContent=h.q.explanation;wrap.append(tag,title,chosen,right,expl);$('reviewList').append(wrap)});$('quizBar').style.width='100%'}
+function finishQuiz(){showQuizScreen('results');$('finalScore').textContent=`${score} / ${round.length}`;$('resultCorrect').textContent=score;$('resultWrong').textContent=round.length-score;$('resultPercent').textContent=Math.round(score/round.length*100)+' %';$('finalMessage').textContent=score===round.length?'Full pott! Du har visat mycket god förståelse.':score>=round.length*.75?'Bra jobbat! Läs gärna igenom de frågor du missade.':'Bra att du tränar! Använd genomgången för att se vilka begrepp du behöver repetera.';$('reviewList').classList.add('hidden');$('showReview').textContent='Visa genomgång';$('reviewList').replaceChildren();history.forEach((h,i)=>{const wrap=document.createElement('div'),title=document.createElement('h4'),chosen=document.createElement('p'),right=document.createElement('p'),expl=document.createElement('p');wrap.className='reviewItem';title.textContent=`${i+1}. ${h.q.question}`;chosen.textContent='Ditt svar: '+h.chosen;chosen.className=h.correct?'goodText':'badText';right.textContent='Rätt svar: '+h.q.options[h.q.answer];right.className='goodText';expl.textContent=h.q.explanation;wrap.append(title,chosen,right,expl);$('reviewList').append(wrap)});$('quizBar').style.width='100%'}
 $('retryQuiz').onclick=startQuiz;$('nextQuestion').onclick=nextQuestion;$('showReview').onclick=()=>{const hidden=$('reviewList').classList.toggle('hidden');$('showReview').textContent=hidden?'Visa genomgång':'Dölj genomgång'};
-function renderTermList(){const target=$('termListEntries');target.replaceChildren();CARDS.forEach((c,i)=>{const entry=document.createElement('article'),heading=document.createElement('h3'),definition=document.createElement('p');entry.className='termEntry';heading.textContent=`${i+1}. ${c.t}`;definition.textContent=c.d;const tag=document.createElement('span');tag.className='lessonTag';tag.textContent=lessonLabel(c.lesson);entry.append(tag,heading,definition);target.append(entry)})}
+function renderTermList(){const target=$('termListEntries');target.replaceChildren();CARDS.forEach((c,i)=>{const entry=document.createElement('article'),heading=document.createElement('h3'),definition=document.createElement('p');entry.className='termEntry';heading.textContent=`${i+1}. ${c.t}`;definition.textContent=c.d;entry.append(heading,definition);target.append(entry)})}
+
+// Fristående övning: 50 källbaserade exempel, 12 slumpade per omgång.
+const RULE_CRITERIA=["Regelbundna politiska val och fri partibildning", "Allmän och lika rösträtt", "Valhemlighet", "Fri opinionsbildning", "Majoritetsprincipen", "Rättssäkerhet"];
+const RULE_CASES=[
+  {
+    "id": "r01",
+    "country": "Sverige",
+    "text": "I Sverige är domstolarna självständiga från regeringen. En minister får inte ringa en domare och bestämma hur ett brottmål ska avgöras.",
+    "correct": [
+      6
+    ],
+    "explanation": "Det är en styrka för rättssäkerheten: domaren ska följa lagen och pröva bevisen, inte regeringens önskemål."
+  },
+  {
+    "id": "r02",
+    "country": "Turkiet",
+    "text": "I Turkiet har oppositionspolitiker hållits frihetsberövade under långa perioder. Möjligheterna att få en snabb och oberoende rättslig prövning har kritiserats.",
+    "correct": [
+      6
+    ],
+    "explanation": "Rättssäkerhet kräver att ett frihetsberövande kan prövas av en oberoende domstol. Långa häktningstider utan tillräcklig prövning riskerar att kränka den rätten."
+  },
+  {
+    "id": "r03",
+    "country": "Ungern",
+    "text": "I Ungern har ändringar av reglerna för hur domare utses väckt kritik om ökat politiskt inflytande över rättsväsendet.",
+    "correct": [
+      6
+    ],
+    "explanation": "Om politiker får för stort inflytande över domartillsättningar kan medborgarnas rätt till en opartisk prövning försvagas."
+  },
+  {
+    "id": "r04",
+    "country": "USA",
+    "text": "I USA kan den som inte har råd med en advokat få en offentlig försvarare. På vissa håll har dessa försvarare mycket många ärenden.",
+    "correct": [
+      6
+    ],
+    "explanation": "Rätten till juridiskt försvar är en viktig del av rättssäkerheten. Hög arbetsbelastning kan göra det svårare att förbereda ett försvar."
+  },
+  {
+    "id": "r05",
+    "country": "Ryssland",
+    "text": "I Ryssland kan människor straffas för att offentligt kritisera kriget i Ukraina. Det gäller även politiska åsikter som uttrycks i inlägg på sociala medier.",
+    "correct": [
+      4
+    ],
+    "explanation": "När människor riskerar straff för fredliga politiska åsikter begränsas yttrandefriheten och den fria opinionsbildningen."
+  },
+  {
+    "id": "r06",
+    "country": "Sverige",
+    "text": "I Sverige får människor ordna fredliga demonstrationer mot regeringens beslut. Polisen ska normalt skydda möjligheten att demonstrera.",
+    "correct": [
+      4
+    ],
+    "explanation": "Det visar fri opinionsbildning i praktiken. Demonstrationsfriheten gör att medborgare kan kritisera makten offentligt."
+  },
+  {
+    "id": "r07",
+    "country": "Ungern",
+    "text": "I Ungern har regler om utländsk finansiering och registrering gjort arbetet svårare för vissa regeringskritiska organisationer.",
+    "correct": [
+      4
+    ],
+    "explanation": "När civilsamhällets organisationer möter hinder blir det svårare att samla människor och föra fram kritik mot makthavare."
+  },
+  {
+    "id": "r08",
+    "country": "Turkiet",
+    "text": "I Turkiet har advokater som försvarat regeringskritiker själva riskerat att bli misstänkta för brott kopplade till sina klienter.",
+    "correct": [
+      6
+    ],
+    "explanation": "En försvarare måste kunna arbeta självständigt. Annars riskerar den åtalade att inte få ett effektivt juridiskt försvar."
+  },
+  {
+    "id": "r09",
+    "country": "Ryssland",
+    "text": "I Ryssland kan organisationer som tar emot utländskt stöd klassas som ”utländska agenter”. De måste då följa särskilda regler och kontroller.",
+    "correct": [
+      4
+    ],
+    "explanation": "Den ryska lagen om utländska agenter har använts mot människorättsgrupper och kritiska röster, vilket försvårar deras verksamhet."
+  },
+  {
+    "id": "r10",
+    "country": "USA",
+    "text": "I USA kan människor bilda organisationer och delta i stora demonstrationer mot presidentens politik utan att själva protesten automatiskt är olaglig.",
+    "correct": [
+      4
+    ],
+    "explanation": "Mötes- och föreningsfrihet gör att människor kan organisera sig och påverka debatten, även när de är starkt kritiska mot regeringen."
+  },
+  {
+    "id": "r11",
+    "country": "Sverige",
+    "text": "I Sverige kan granskande journalister avslöja misstänkt maktmissbruk hos en minister och publicera uppgifterna utan regeringens godkännande.",
+    "correct": [
+      4
+    ],
+    "explanation": "Fria medier kan granska makthavare och ge väljarna information som behövs för att bilda egna politiska uppfattningar."
+  },
+  {
+    "id": "r12",
+    "country": "Turkiet",
+    "text": "I Turkiet har regeringskritiska tv-kanaler utsatts för sanktioner och begränsningar efter att ha rapporterat kritiskt om makthavarna.",
+    "correct": [
+      4
+    ],
+    "explanation": "När medier riskerar sanktioner för kritik kan journalister börja undvika känsliga ämnen. Det minskar utrymmet för fri debatt."
+  },
+  {
+    "id": "r13",
+    "country": "Ryssland",
+    "text": "I Ryssland dominerar statligt kontrollerade tv-kanaler nyhetsrapporteringen om kriget i Ukraina. Samtidigt har oberoende medier stoppats.",
+    "correct": [
+      4
+    ],
+    "explanation": "När staten dominerar nyhetsbilden och kritiska medier tystas får medborgarna svårare att jämföra olika perspektiv."
+  },
+  {
+    "id": "r14",
+    "country": "Ungern",
+    "text": "I Ungern har många tidningar och andra nyhetsmedier samlats hos ägare som står nära det tidigare regeringspartiet Fidesz.",
+    "correct": [
+      4
+    ],
+    "explanation": "Ägarkoncentration hos regeringsvänliga aktörer kan minska antalet självständiga perspektiv i den politiska debatten."
+  },
+  {
+    "id": "r15",
+    "country": "USA",
+    "text": "I USA kan olika tv-kanaler rapportera om samma presidentbeslut ur tydligt olika politiska perspektiv utan att staten bestämmer en gemensam linje.",
+    "correct": [
+      4
+    ],
+    "explanation": "Att medier kan välja olika perspektiv utan statliga instruktioner är en styrka för fri opinionsbildning, även om partiskhet kan skapa polarisering."
+  },
+  {
+    "id": "r16",
+    "country": "Sverige",
+    "text": "I Sverige är universitetens forskning och undervisning skyddade av principen om akademisk frihet. Forskare ska kunna publicera resultat som kritiserar regeringen.",
+    "correct": [
+      4
+    ],
+    "explanation": "Akademisk frihet gör att forskning och kunskap kan bidra till den offentliga debatten utan att makthavare styr slutsatserna."
+  },
+  {
+    "id": "r17",
+    "country": "Ungern",
+    "text": "I Ungern flyttade Central European University stora delar av sin verksamhet till Wien efter lagändringar som begränsade dess möjligheter att verka.",
+    "correct": [
+      4
+    ],
+    "explanation": "När politiska beslut försvårar för universitet att arbeta självständigt kan forskning och öppet meningsutbyte påverkas."
+  },
+  {
+    "id": "r18",
+    "country": "Turkiet",
+    "text": "I Turkiet har universitetsanställda som skrivit under regeringskritiska upprop riskerat att förlora sina arbeten. Det kan få andra forskare att undvika offentlig kritik.",
+    "correct": [
+      4
+    ],
+    "explanation": "När akademiker riskerar påföljder för sina åsikter kan den fria opinionsbildningen och den akademiska friheten försvagas."
+  },
+  {
+    "id": "r19",
+    "country": "Ryssland",
+    "text": "Den ryske oppositionspolitikern Aleksej Navalnyj greps när han återvände till Ryssland 2021. Han dömdes till fängelse och dog i en straffkoloni 2024.",
+    "correct": [
+      6
+    ],
+    "explanation": "Navalnyjs fängslande väckte internationell kritik mot rättsprocessen. Rättssäkerhet innebär att även regeringskritiker har rätt till en rättvis och oberoende prövning."
+  },
+  {
+    "id": "r20",
+    "country": "Turkiet",
+    "text": "I Turkiet har domstolarnas självständighet ifrågasatts när regeringen fått ökat inflytande över rättsväsendets institutioner.",
+    "correct": [
+      6
+    ],
+    "explanation": "En rättssäker domstol måste kunna döma även mot regeringens intressen. Politiskt beroende riskerar att underminera förtroendet."
+  },
+  {
+    "id": "r21",
+    "country": "Sverige",
+    "text": "I Sverige deltar nämndemän i vissa domstolar. De är lekmannadomare som nomineras av politiska partier, vilket ibland väcker debatt om opartiskhet.",
+    "correct": [
+      6
+    ],
+    "explanation": "Nämndemän ska döma efter lagen, inte partipolitik. Diskussionen gäller hur domstolarnas oberoende och opartiskhet säkerställs."
+  },
+  {
+    "id": "r22",
+    "country": "USA",
+    "text": "I USA kan en förmögen åtalad anlita ett stort advokatteam, medan en person med låg inkomst ofta är beroende av en offentlig försvarare.",
+    "correct": [
+      6
+    ],
+    "explanation": "Rätten till försvar ska gälla alla. Stora skillnader i juridiska resurser kan påverka möjligheterna till en rättvis process."
+  },
+  {
+    "id": "r23",
+    "country": "Turkiet",
+    "text": "I Turkiet har breda antiterrorlagar använts i rättsprocesser mot regeringskritiker. Kritiker menar att lagarnas tillämpning ibland är svår att förutse.",
+    "correct": [
+      6
+    ],
+    "explanation": "Rättssäkerhet kräver tydliga lagar och förutsebara rättsliga beslut. Människor ska kunna förstå vad som är straffbart."
+  },
+  {
+    "id": "r24",
+    "country": "Ryssland",
+    "text": "I Ryssland har personer fått böter för inlägg på sociala medier som kritiserar den ryska militären. Reglerna skärptes efter invasionen av Ukraina 2022.",
+    "correct": [
+      4
+    ],
+    "explanation": "När kritik mot militären bestraffas får människor svårare att uttrycka avvikande politiska åsikter. Det begränsar fri opinionsbildning."
+  },
+  {
+    "id": "r25",
+    "country": "Sverige",
+    "text": "I Sverige ska en person som åtalas för brott få sin sak prövad av en domstol som följer lagen och inte tar instruktioner från regeringen.",
+    "correct": [
+      6
+    ],
+    "explanation": "Rätten till en rättvis prövning inför en oberoende domstol är central för rättssäkerheten och skyddar mot godtycklig makt."
+  },
+  {
+    "id": "r26",
+    "country": "Iran",
+    "text": "I Iran har deltagare i protester gripits och hållits frihetsberövade utan att anklagelserna prövats rättvist av en oberoende domstol.",
+    "correct": [
+      6
+    ],
+    "explanation": "Skydd mot godtyckligt frihetsberövande och rätten till rättvis rättegång är centrala delar av rättssäkerheten."
+  },
+  {
+    "id": "r27",
+    "country": "Iran",
+    "text": "I Iran har gripna demonstranter uppgett att de pressats att erkänna brott. Erkännanden har också visats i statlig tv före rättslig prövning.",
+    "correct": [
+      6
+    ],
+    "explanation": "Framtvingade erkännanden är oförenliga med en rättvis rättegång. Staten måste pröva bevis och respektera den misstänktes rättigheter."
+  },
+  {
+    "id": "r28",
+    "country": "Iran",
+    "text": "Under protester i Iran har myndigheterna begränsat internetåtkomsten, vilket gjort det svårt att sprida filmer och rapporter om vad som händer.",
+    "correct": [
+      4
+    ],
+    "explanation": "Internetbegränsningar kan hindra människor från att sprida information, granska myndigheter och organisera fredliga protester."
+  },
+  {
+    "id": "r29",
+    "country": "Sverige",
+    "text": "I Sverige hålls riksdagsval vart fjärde år. Flera partier kan registrera kandidater och konkurrera om väljarnas röster.",
+    "correct": [
+      1
+    ],
+    "explanation": "Återkommande val och möjligheten att bilda partier gör att medborgarna kan välja mellan politiska alternativ."
+  },
+  {
+    "id": "r30",
+    "country": "Ungern",
+    "text": "I Ungern har val hållits regelbundet, men under Fidesz styre kritiserades fördelningen av medieutrymme och kampanjresurser.",
+    "correct": [
+      1
+    ],
+    "explanation": "Regelbundna val räcker inte om ett parti får så stora fördelar att oppositionen har svårt att konkurrera på lika villkor."
+  },
+  {
+    "id": "r31",
+    "country": "Ryssland",
+    "text": "I Rysslands presidentval 2024 fick Vladimir Putin enligt det officiella resultatet 87 procent. Flera verkliga politiska utmanare hade hindrats från att delta.",
+    "correct": [
+      1
+    ],
+    "explanation": "Ett val blir inte fritt enbart för att röster räknas. Väljarna måste också ha verkliga alternativ att välja mellan."
+  },
+  {
+    "id": "r32",
+    "country": "Turkiet",
+    "text": "I Turkiet hålls val, men valadministrationens självständighet och villkoren för oppositionen har ifrågasatts.",
+    "correct": [
+      1
+    ],
+    "explanation": "När valens kontrollfunktioner inte uppfattas som oberoende kan väljarnas förtroende för en rättvis politisk konkurrens minska."
+  },
+  {
+    "id": "r33",
+    "country": "Sverige",
+    "text": "Inför riksdagsvalet 2022 infördes nya avskärmningar i svenska vallokaler för att andra inte ska kunna se vilka valsedlar väljaren tar.",
+    "correct": [
+      3
+    ],
+    "explanation": "Valhemligheten skyddar människor från påtryckningar. Ingen ska behöva visa andra vilket parti hen röstar på."
+  },
+  {
+    "id": "r34",
+    "country": "USA",
+    "text": "I USA varierar reglerna för väljarregistrering mellan delstater. I vissa delstater måste väljare registrera sig i god tid före valdagen.",
+    "correct": [
+      2
+    ],
+    "explanation": "När registreringskrav gör det svårare för röstberättigade att rösta påverkas möjligheten att använda sin rösträtt i praktiken."
+  },
+  {
+    "id": "r36",
+    "country": "Sverige",
+    "text": "I Sverige har varje röstberättigad medborgare en röst i riksdagsvalet, oavsett inkomst, yrke eller utbildning.",
+    "correct": [
+      2
+    ],
+    "explanation": "Allmän och lika rösträtt betyder att varje röstberättigad persons röst ska väga lika tungt."
+  },
+  {
+    "id": "r37",
+    "country": "Sverige",
+    "text": "I Sveriges riksdag kan ett lagförslag antas när fler än hälften av de röstande ledamöterna stöder det, enligt gällande beslutsregler.",
+    "correct": [
+      5
+    ],
+    "explanation": "Majoritetsprincipen innebär att den sida som får flest röster i en omröstning normalt avgör beslutet."
+  },
+  {
+    "id": "r38",
+    "country": "USA",
+    "text": "I USA röstar ledamöter i kongressens representanthus om lagförslag. Ett förslag kan gå vidare om det får tillräckligt stöd i omröstningen.",
+    "correct": [
+      5
+    ],
+    "explanation": "Beslut i folkvalda församlingar bygger ofta på majoritetsprincipen, även om ytterligare beslutssteg kan krävas."
+  },
+  {
+    "id": "r39",
+    "country": "Sverige",
+    "text": "I Sverige får tidningar publicera kritiska artiklar om en lag som riksdagen nyligen har röstat igenom. Regeringen får inte stoppa artiklarna för att de är kritiska.",
+    "correct": [
+      4
+    ],
+    "explanation": "Pressfrihet och fri opinionsbildning gäller också efter att ett demokratiskt beslut har fattats. Medierna kan fortsätta granska makthavarna."
+  },
+  {
+    "id": "r40",
+    "country": "Ungern",
+    "text": "I Ungern har Fidesz under sin tid vid makten ändrat vallagar på sätt som enligt kritiker har gjort det svårare för oppositionen att konkurrera på lika villkor.",
+    "correct": [
+      1
+    ],
+    "explanation": "Regelbundna val räcker inte om reglerna ger ett parti stora fördelar. Fria val kräver att flera partier kan konkurrera på rimliga villkor."
+  },
+  {
+    "id": "r41",
+    "country": "Sverige",
+    "text": "I Sverige kan en person som grips begära att ett frihetsberövande prövas rättsligt. Polisens misstanke räcker inte ensam för att hålla någon inlåst hur länge som helst.",
+    "correct": [
+      6
+    ],
+    "explanation": "Rättssäkerhet innebär att myndigheternas beslut kan kontrolleras och att frihetsberövanden måste ha stöd i lag."
+  },
+  {
+    "id": "r42",
+    "country": "Ryssland",
+    "text": "Efter Aleksej Navalnyjs död 2024 greps människor i flera ryska städer när de samlades för att lägga blommor och hedra honom.",
+    "correct": [
+      4
+    ],
+    "explanation": "Att människor riskerar att gripas vid fredliga sammankomster kan begränsa mötesfriheten och den fria opinionsbildningen."
+  },
+  {
+    "id": "r43",
+    "country": "Ungern",
+    "text": "I Ungern har lagar om registrering och finansiering gjort arbetet svårare för organisationer som granskar regeringen och försvarar mänskliga rättigheter.",
+    "correct": [
+      4
+    ],
+    "explanation": "När föreningar får svårt att organisera sig och kritisera makten försvagas civilsamhällets möjligheter till fri opinionsbildning."
+  },
+  {
+    "id": "r44",
+    "country": "USA",
+    "text": "I USA finns domstolar som kan pröva om beslut av presidenten eller andra myndigheter följer lagen och författningen.",
+    "correct": [
+      6
+    ],
+    "explanation": "När domstolar kan granska den verkställande makten stärks rättssäkerheten. Även makthavare måste följa lagen."
+  },
+  {
+    "id": "r45",
+    "country": "Turkiet",
+    "text": "I Turkiet har vissa regeringskritiska medier fått böter eller andra sanktioner efter rapportering om politiska frågor. Journalister kan då bli försiktigare med vad de publicerar.",
+    "correct": [
+      4
+    ],
+    "explanation": "Sanktioner mot kritiska medier kan leda till självcensur. Det gör det svårare för människor att få information och bilda egna åsikter."
+  },
+  {
+    "id": "r46",
+    "country": "Sverige",
+    "text": "I svenska vallokaler används avskärmningar så att andra väljare inte ska kunna se vilka valsedlar en person väljer inför riksdagsvalet.",
+    "correct": [
+      3
+    ],
+    "explanation": "Valhemligheten skyddar väljaren från påtryckningar. Ingen ska behöva avslöja vilket parti hen röstar på."
+  },
+  {
+    "id": "r47",
+    "country": "USA",
+    "text": "I vissa amerikanska delstater kan personer som dömts för brott förlora rösträtten under en period, ibland även efter avtjänat straff.",
+    "correct": [
+      2
+    ],
+    "explanation": "Allmän och lika rösträtt handlar om vilka som får rösta och hur lika möjligheterna att delta är. Begränsningar av rösträtten kan utestänga grupper."
+  },
+  {
+    "id": "r48",
+    "country": "Ryssland",
+    "text": "I Ryssland ändrades grundlagen 2020 så att Vladimir Putin kunde ställa upp i ytterligare presidentval. Samtidigt har flera verkliga politiska utmanare hindrats från att kandidera.",
+    "correct": [
+      1
+    ],
+    "explanation": "Fria val kräver verkliga alternativ. När oppositionella kandidater stoppas begränsas den politiska konkurrensen även om val hålls."
+  },
+  {
+    "id": "r49",
+    "country": "Sverige",
+    "text": "I en svensk kommunfullmäktigeförsamling röstar ledamöterna om ett budgetförslag. Förslaget med flest röster enligt beslutsreglerna blir antaget.",
+    "correct": [
+      5
+    ],
+    "explanation": "Majoritetsprincipen innebär att beslut i folkvalda församlingar normalt avgörs genom omröstning där det alternativ som får tillräckligt stöd vinner."
+  },
+  {
+    "id": "r50",
+    "country": "Iran",
+    "text": "I Iran har personer som gripits i samband med protester berättat att de pressats att erkänna brott innan en oberoende domstol prövat bevisen.",
+    "correct": [
+      6
+    ],
+    "explanation": "Ett framtvingat erkännande får inte ersätta en rättvis rättegång. Rättssäkerhet kräver att den misstänktes rättigheter respekteras."
+  },
+  {
+    "id": "r51",
+    "country": "USA",
+    "text": "I USA kan medborgare organisera stora demonstrationer mot presidentens politik och sprida kritik via tidningar och sociala medier.",
+    "correct": [
+      4
+    ],
+    "explanation": "Möjligheten att protestera och föra fram politiska åsikter utan statlig förhandskontroll är en styrka för fri opinionsbildning."
+  }
+];
+let rulesRound=[],rulesAt=0,rulesPoints=0,rulesSelection=new Set(),rulesLocked=false,rulesHistory=[];
+function startRules(){rulesRound=shuffled(RULE_CASES).slice(0,12);rulesAt=0;rulesPoints=0;rulesHistory=[];$('rulesPlay').classList.remove('hidden');$('rulesResults').classList.add('hidden');renderRules()}
+function renderRules(){rulesSelection=new Set();rulesLocked=false;const item=rulesRound[rulesAt];$('rulesCount').textContent=`Exempel ${rulesAt+1} av ${rulesRound.length}`;$('rulesScore').textContent=`${rulesPoints} rätt hittills`;$('rulesBar').style.width=100*rulesAt/rulesRound.length+'%';$('rulesMeta').textContent=item.country;$('rulesPrompt').textContent=item.text;$('rulesHelp').textContent='Välj ett kriterium och tryck på Kontrollera svar.';$('rulesFeedback').className='ruleFeedback hidden';$('rulesFeedback').replaceChildren();$('rulesCheck').classList.remove('hidden');$('rulesCheck').disabled=true;$('rulesNext').classList.add('hidden');$('rulesChoices').replaceChildren();RULE_CRITERIA.forEach((name,i)=>{const b=document.createElement('button');b.type='button';b.className='ruleChoice';b.setAttribute('aria-pressed','false');const num=document.createElement('span');num.className='ruleNum';num.textContent=i+1;const label=document.createElement('span');label.textContent=name;b.append(num,label);b.onclick=()=>toggleRule(i+1);$('rulesChoices').append(b)})}
+function toggleRule(k){if(rulesLocked)return;rulesSelection=new Set([k]);[...$('rulesChoices').children].forEach((b,i)=>{const yes=i+1===k;b.classList.toggle('selected',yes);b.setAttribute('aria-pressed',String(yes))});$('rulesCheck').disabled=false;$('rulesHelp').textContent='Ett kriterium valt. Kontrollera svaret eller välj ett annat.'}
+function checkRules(){if(rulesLocked||!rulesSelection.size)return;rulesLocked=true;const item=rulesRound[rulesAt],right=item.correct,selected=[...rulesSelection].sort((a,b)=>a-b),ok=selected.length===right.length&&selected.every(k=>right.includes(k));if(ok)rulesPoints++;rulesHistory.push({item,selected,ok});[...$('rulesChoices').children].forEach((b,i)=>{const k=i+1;b.disabled=true;if(right.includes(k))b.classList.add('correct');else if(rulesSelection.has(k))b.classList.add('incorrect')});$('rulesCheck').classList.add('hidden');$('rulesNext').classList.remove('hidden');$('rulesNext').textContent=rulesAt===rulesRound.length-1?'Visa resultat →':'Nästa exempel →';const fb=$('rulesFeedback');fb.className='ruleFeedback'+(ok?'':' bad');const h=document.createElement('strong'),a=document.createElement('p'),e=document.createElement('p');h.textContent=ok?'Rätt svar!':'Inte riktigt – så här hänger det ihop';a.textContent='Rätt kriterium: '+RULE_CRITERIA[right[0]-1];e.textContent=item.explanation;fb.append(h,a,e);$('rulesScore').textContent=`${rulesPoints} rätt hittills`}
+function nextRules(){if(!rulesLocked)return;if(rulesAt<rulesRound.length-1){rulesAt++;renderRules()}else finishRules()}
+function finishRules(){$('rulesPlay').classList.add('hidden');$('rulesResults').classList.remove('hidden');$('rulesFinal').textContent=`${rulesPoints} / ${rulesRound.length}`;$('rulesMessage').textContent=rulesPoints===rulesRound.length?'Full pott! Du känner igen demokratins kriterier i konkreta situationer.':rulesPoints>=9?'Bra jobbat! Gå gärna igenom de exempel du missade.':'Fortsätt träna! Läs förklaringarna och prova en ny omgång.';$('rulesReview').classList.add('hidden');$('rulesReviewBtn').textContent='Visa genomgång';$('rulesReview').replaceChildren();rulesHistory.forEach((h,i)=>{const wrap=document.createElement('div'),head=document.createElement('strong'),your=document.createElement('p'),correct=document.createElement('p'),expl=document.createElement('p');wrap.className='ruleReviewItem';head.textContent=`${i+1}. ${h.item.country}: ${h.item.text}`;your.textContent='Ditt svar: '+h.selected.map(k=>RULE_CRITERIA[k-1]).join(' och ');correct.textContent='Rätt svar: '+h.item.correct.map(k=>RULE_CRITERIA[k-1]).join(' och ');expl.textContent=h.item.explanation;wrap.append(head,your,correct,expl);$('rulesReview').append(wrap)});$('rulesBar').style.width='100%';window.scrollTo(0,0)}
+$('rulesCheck').onclick=checkRules;$('rulesNext').onclick=nextRules;$('rulesRetry').onclick=()=>{startRules();window.scrollTo(0,0)};$('rulesReviewBtn').onclick=()=>{const hidden=$('rulesReview').classList.toggle('hidden');$('rulesReviewBtn').textContent=hidden?'Visa genomgång':'Dölj genomgång'};
+
 renderCards();renderGlossary();renderTermList();
 </script>
 </body>
